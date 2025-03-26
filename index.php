@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div>header mit cta</div>
 
 <div>leistungen</div>

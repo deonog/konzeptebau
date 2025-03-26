@@ -1,21 +1,32 @@
 <?php
+/**
+ * Theme Functions
+ * 
+ * This file contains all the core functionality for the Konzeptebau theme
+ */
 
-// Hide Admin bar
+/**
+ * Admin Bar Settings
+ */
 function hide_admin_bar(){ return false; }
 add_filter( 'show_admin_bar', 'hide_admin_bar' );
 
-// Post Thumbnails
-
+/**
+ * Theme Setup & Support
+ */
 function wpb_theme_setup(){
+    // Enable featured images
     add_theme_support('post-thumbnails');
+    // Enable excerpts on pages
     add_post_type_support( 'page', 'excerpt' );
 }
+add_action('after_setup_theme','wpb_theme_setup');
 
-// Menu
-
+/**
+ * Navigation Menu Registration
+ */
 function register_my_menus() {
-
-    // Nav Menus
+    // Register navigation menu locations
     register_nav_menus(
       array(
         'header-menu' => __( 'Header Menu' ),
@@ -23,43 +34,37 @@ function register_my_menus() {
       )
     );
 
-    // Post Formats
+    // Add theme support for post formats
     add_theme_support('post-formats', array('aside','gallery'));
-  }
-
+}
 add_action( 'init', 'register_my_menus' );
 
-// Excerpt length
-
-add_action('after_setup_theme','wpb_theme_setup');
-
-// Excerpt Length Control
-
+/**
+ * Excerpt Settings
+ */
 function set_excerpt_length(){
     return 35;
 }
-
 add_filter('excerpt_length', 'set_excerpt_length');
 
+/**
+ * Widget Areas
+ */
+function wpb_init_widgets($id){
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar',
+        'before_widget' => '<div class="sidebar-module">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
+    ));
+}
+add_action('widgets_init','wpb_init_widgets');
 
-    // Widget Locations
-
-    function wpb_init_widgets($id){
-      register_sidebar(array(
-          'name' => 'Sidebar',
-          'id' => 'sidebar',
-          'before_widget' => '<div class="sidebar-module">',
-          'after_widget' => '</div>',
-          'before_title' => '<h4>',
-          'after_title' => '</h4>'
-      ));
-
-  }
-
-  add_action('widgets_init','wpb_init_widgets');
-
-
-// Register Custom Post Type: Services
+/**
+ * Custom Post Type: Services
+ */
 function custom_services_post_type() {
     $labels = array(
         'name'               => 'Services',
@@ -89,7 +94,7 @@ function custom_services_post_type() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'menu_icon'          => 'dashicons-hammer', // Change icon if needed
+        'menu_icon'          => 'dashicons-hammer',
         'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
         'show_in_rest'       => true, // Enable Gutenberg support
     );
@@ -98,7 +103,10 @@ function custom_services_post_type() {
 }
 add_action( 'init', 'custom_services_post_type' );
 
-// Add Custom Meta Box for Service Price & Duration
+/**
+ * Service Custom Fields
+ */
+// Add meta box for service details
 function custom_service_meta_box() {
     add_meta_box(
         'service_details',
@@ -111,7 +119,7 @@ function custom_service_meta_box() {
 }
 add_action( 'add_meta_boxes', 'custom_service_meta_box' );
 
-// Meta Box Callback Function (Displays Fields)
+// Display meta box fields
 function service_meta_box_callback( $post ) {
     // Retrieve saved values
     $service_price = get_post_meta( $post->ID, 'service_price', true );
@@ -129,31 +137,48 @@ function service_meta_box_callback( $post ) {
     <?php
 }
 
-// Save Meta Box Data
+// Save meta box data
 function save_service_meta( $post_id ) {
     // Prevent auto-saving
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 
-    // Check and save Service Price
+    // Save service price
     if ( isset( $_POST['service_price'] ) ) {
         update_post_meta( $post_id, 'service_price', sanitize_text_field( $_POST['service_price'] ) );
     }
 
-    // Check and save Service Duration
+    // Save service duration
     if ( isset( $_POST['service_duration'] ) ) {
         update_post_meta( $post_id, 'service_duration', sanitize_text_field( $_POST['service_duration'] ) );
     }
 }
 add_action( 'save_post', 'save_service_meta' );
 
-// Flush Permalinks on Activation (Important!)
+/**
+ * Asset Enqueuing
+ */
+function enqueue_tailwind_css() {
+    wp_enqueue_style(
+        'tailwind-style',
+        get_template_directory_uri() . '/dist/css/style.css',
+        array(),
+        filemtime(get_template_directory() . '/dist/css/style.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_tailwind_css');
+
+/**
+ * Activation Hooks
+ */
 function custom_services_rewrite_flush() {
     custom_services_post_type();
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'custom_services_rewrite_flush' );
 
-
+/**
+ * Disable Gutenberg Editor
+ */
 add_filter('use_block_editor_for_post', '__return_false', 10);
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
 ?>

@@ -1,0 +1,48 @@
+/*
+Theme Name: Konzeptebau
+Theme URI: [your-theme-uri]
+Author: [your-name]
+Author URI: [your-website]
+Description: A modern WordPress theme built with Tailwind CSS
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: konzeptebau
+*/
+
+/* 
+Note: Your actual styles will be in dist/css/style.css 
+This file is just for WordPress theme information
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that use Tailwind classes */
+@layer components {
+  .wp-block {
+    @apply max-w-screen-xl mx-auto px-4;
+  }
+  
+  /* Add your custom component styles here */
+  .service-item {
+    @apply bg-white rounded-lg shadow-md transition-transform hover:translate-y-[-4px] hover:shadow-lg;
+  }
+  
+  .service-title {
+    @apply text-2xl font-bold mb-4;
+  }
+  
+  .service-price {
+    @apply text-green-600 font-semibold text-lg;
+  }
+  
+  .service-duration {
+    @apply text-gray-600 text-sm;
+  }
+  
+  .read-more-btn {
+    @apply inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors;
+  }
+}
