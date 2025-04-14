@@ -167,6 +167,20 @@ function enqueue_tailwind_css() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_tailwind_css');
 
+/** 
+ * Enqueue JavaScript
+ */
+function enqueue_scripts() {
+    wp_enqueue_script(
+        'main-js',
+        get_template_directory_uri() . '/src/js/main.js',
+        array(),
+        filemtime(get_template_directory() . '/src/js/main.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
 /**
  * Activation Hooks
  */

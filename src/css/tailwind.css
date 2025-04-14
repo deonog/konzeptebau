@@ -45,4 +45,34 @@ This file is just for WordPress theme information
   .read-more-btn {
     @apply inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors;
   }
+  
+  /* Desktop card styles */
+  @screen md {
+    .services-grid .group {
+      aspect-ratio: 3/8;
+    }
+    
+    .services-grid img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  /* Hide floating buttons on very small screens */
+  @media (max-height: 500px) {
+      .fixed.right-4 {
+          display: none;
+      }
+  }
+  
+  /* Add hover animation */
+  .fixed.right-4 a {
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+  }
+  
+  .fixed.right-4 a:hover {
+      transform: translateX(-8px);
+  }
 }
