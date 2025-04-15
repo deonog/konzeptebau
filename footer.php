@@ -25,10 +25,10 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4">Schnelllinks</h3>
                 <ul class="space-y-2">
-                    <li><a href="#services" class="hover:text-red-500">Leistungen</a></li>
-                    <li><a href="#references" class="hover:text-red-500">Referenzen</a></li>
-                    <li><a href="#career" class="hover:text-red-500">Jobs</a></li>
-                    <li><a href="#contact" class="hover:text-red-500">Kontakt</a></li>
+                    <li><a href="<?php echo home_url(); ?>#services" class="hover:text-red-500">Leistungen</a></li>
+                    <li><a href="<?php echo home_url(); ?>#references" class="hover:text-red-500">Referenzen</a></li>
+                    <li><a href="<?php echo home_url(); ?>#career" class="hover:text-red-500">Jobs</a></li>
+                    <li><a href="<?php echo home_url(); ?>#contact" class="hover:text-red-500">Kontakt</a></li>
                 </ul>
             </div>
 
@@ -50,11 +50,24 @@
                     © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Alle Rechte vorbehalten.
                 </p>
                 <div class="mt-4 md:mt-0">
-                    <ul class="flex space-x-6 text-sm text-gray-400">
-                        <li><a href="/impressum" class="hover:text-white">Impressum</a></li>
-                        <li><a href="/datenschutz" class="hover:text-white">Datenschutz</a></li>
-                        <li><a href="/agb" class="hover:text-white">AGB</a></li>
-                    </ul>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'footer-menu',
+                            'container'      => false,
+                            'menu_class'     => 'flex space-x-6 text-sm text-gray-400',
+                            'fallback_cb'    => function() {
+                                echo '<ul class="flex space-x-6 text-sm text-gray-400">
+                                    <li><a href="/impressum" class="hover:text-white">Impressum</a></li>
+                                    <li><a href="/datenschutz" class="hover:text-white">Datenschutz</a></li>
+                                    <li><a href="/agb" class="hover:text-white">AGB</a></li>
+                                </ul>';
+                            },
+                            'depth'          => 1,
+                            'add_li_class'   => 'hover:text-white',
+                        )
+                    );
+                    ?>
                 </div>
             </div>
         </div>

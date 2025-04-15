@@ -55,10 +55,10 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center justify-center flex-1 space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-red-700">Leistungen</a>
-                    <a href="#references" class="text-gray-700 hover:text-red-700">Referenzen</a>
-                    <a href="#career" class="text-gray-700 hover:text-red-700">Jobs</a>
-                    <a href="#contact" class="text-gray-700 hover:text-red-700">Kontakt</a>
+                    <a href="<?php echo home_url(); ?>#services" class="text-gray-700 hover:text-red-700">Leistungen</a>
+                    <a href="<?php echo home_url(); ?>#references" class="text-gray-700 hover:text-red-700">Referenzen</a>
+                    <a href="<?php echo home_url(); ?>#career" class="text-gray-700 hover:text-red-700">Jobs</a>
+                    <a href="<?php echo home_url(); ?>#contact" class="text-gray-700 hover:text-red-700">Kontakt</a>
                 </div>
 
                 <!-- Desktop CTA -->
