@@ -160,9 +160,9 @@ add_action( 'save_post', 'save_service_meta' );
 function enqueue_tailwind_css() {
     wp_enqueue_style(
         'tailwind-style',
-        get_template_directory_uri() . '/dist/css/style.css',
+        get_template_directory_uri() . '/style.css',
         array(),
-        filemtime(get_template_directory() . '/dist/css/style.css')
+        filemtime(get_template_directory() . '/style.css')
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_tailwind_css');

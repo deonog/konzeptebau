@@ -4,9 +4,9 @@
     "description": "WordPress theme with Tailwind CSS",
     "scripts": {
         "dev": "npm-run-all --parallel watch serve",
-        "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/css/style.css --watch",
-        "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/css/style.css --minify",
-        "serve": "browser-sync start --proxy 'localhost:8888' --files 'dist/css/*.css, **/*.php' --ignore 'node_modules' --notify false"
+        "watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./style.css --watch",
+        "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./style.css --minify",
+        "serve": "browser-sync start --proxy 'localhost:8888' --files '*.css, **/*.php' --ignore 'node_modules' --notify false"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.17",
