@@ -75,4 +75,28 @@ This file is just for WordPress theme information
   .fixed.right-4 a:hover {
       transform: translateX(-8px);
   }
+
+  /* Parallax Effect */
+  .parallax-container {
+    @apply absolute top-0 left-0 w-full h-full overflow-hidden;
+  }
+
+  .parallax-image {
+    @apply absolute top-0 left-0 w-full h-full;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    transform: translateY(0) scale(1.1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .parallax-image {
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
