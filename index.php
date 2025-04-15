@@ -34,7 +34,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="group">
                     <div class="aspect-square overflow-hidden mb-4 relative">
                         <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
@@ -127,50 +127,61 @@
     <section class="py-16 md:py-24" id="references">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">Zimmerei und Dachdeckerei in Lastrup:</h2>
-                <h3 class="text-xl md:text-2xl mb-4">Das A-Team Holzbau</h3>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Unsere Referenzen</h2>
                 <p class="text-gray-700">
-                    Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.
+                    Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="group">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group cursor-pointer">
                     <div class="aspect-square overflow-hidden mb-4">
                         <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                                alt="Holzbau" 
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             alt="Holzbau" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
+                        <p class="hidden group-hover-content">
+                            Ein modernes Einfamilienhaus mit nachhaltiger Holzbauweise. Das Projekt umfasste die komplette Erstellung des Dachstuhls und die Montage der Photovoltaikanlage.
+                        </p>
                     </div>
-                    <h4 class="text-lg font-semibold">→ Holzbau</h4>
+                    <h4 class="text-lg font-semibold">→ Holzbau Projekt</h4>
                 </div>
 
-                <div class="group">
+                <div class="group cursor-pointer">
                     <div class="aspect-square overflow-hidden mb-4">
                         <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                                alt="Bedachung" 
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             alt="Bedachung" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
+                        <p class="hidden group-hover-content">
+                            Komplette Dachsanierung eines historischen Gebäudes in Lastrup. Wir haben das Dach neu eingedeckt und dabei die historische Optik erhalten.
+                        </p>
                     </div>
-                    <h4 class="text-lg font-semibold">→ Bedachung</h4>
+                    <h4 class="text-lg font-semibold">→ Dachsanierung</h4>
                 </div>
 
-                <div class="group">
+                <div class="group cursor-pointer">
                     <div class="aspect-square overflow-hidden mb-4">
                         <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                                alt="Innenausbau" 
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             alt="Innenausbau" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
+                        <p class="hidden group-hover-content">
+                            Moderner Innenausbau mit individuellen Holzelementen. Das Projekt umfasste die Erstellung von Einbauschränken, Treppen und Wandverkleidungen.
+                        </p>
                     </div>
                     <h4 class="text-lg font-semibold">→ Innenausbau</h4>
                 </div>
 
-                <div class="group">
+                <div class="group cursor-pointer">
                     <div class="aspect-square overflow-hidden mb-4">
                         <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                                alt="Photovoltaik" 
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             alt="Photovoltaik" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
+                        <p class="hidden group-hover-content">
+                            Installation einer modernen Photovoltaikanlage mit Speicherlösung. Das System deckt den kompletten Strombedarf des Hauses.
+                        </p>
                     </div>
                     <h4 class="text-lg font-semibold">→ Photovoltaik</h4>
                 </div>

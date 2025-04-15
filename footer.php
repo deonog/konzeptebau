@@ -23,7 +23,7 @@
 
             <!-- Quick Links -->
             <div>
-                <h3 class="text-lg font-semibold mb-4">Schnelllinks</h3>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-2">
                     <li><a href="<?php echo home_url(); ?>#services" class="hover:text-red-500">Leistungen</a></li>
                     <li><a href="<?php echo home_url(); ?>#references" class="hover:text-red-500">Referenzen</a></li>

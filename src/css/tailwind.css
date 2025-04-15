@@ -75,24 +75,31 @@ This file is just for WordPress theme information
   .fixed.right-4 a:hover {
       transform: translateX(-8px);
   }
+}
 
-  /* Parallax Effect */
-  .parallax-container {
-    @apply absolute top-0 left-0 w-full h-full overflow-hidden;
-  }
+/* Parallax Effect */
+.parallax-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  .parallax-image {
-    @apply absolute top-0 left-0 w-full h-full;
-    will-change: transform;
-    transition: transform 0.1s ease-out;
-    transform: translateY(0) scale(1.1);
-  }
+.parallax-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
 
-  @media (prefers-reduced-motion: reduce) {
-    .parallax-image {
-      transform: none;
-      transition: none;
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .parallax-container img {
+      transform: translateY(0) scale(1.1);
   }
 }
 
