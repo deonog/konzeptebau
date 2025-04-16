@@ -70,7 +70,7 @@
                     </div>
                 <?php else :
                     foreach ($services as $service) : ?>      
-                        <div class="group">
+                        <div class="group service-item cursor-pointer">
                             <div class="aspect-square overflow-hidden mb-4 relative">
                                 <img src="<?php echo get_the_post_thumbnail_url($service->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
                                      alt="<?php echo esc_attr($service->post_title); ?>" 
@@ -152,7 +152,7 @@
                     </div>
                 <?php else :
                     foreach ($references as $reference) : ?>      
-                        <div class="group">
+                        <div class="group cursor-pointer">
                             <div class="aspect-square overflow-hidden mb-4 relative">
                                 <img src="<?php echo get_the_post_thumbnail_url($reference->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
                                      alt="<?php echo esc_attr($reference->post_title); ?>" 
