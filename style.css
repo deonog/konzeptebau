@@ -15,8 +15,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-Thin.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-Thin.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-Thin.ttf') format('truetype');
 
   font-weight: 100;
 
@@ -28,8 +27,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-ExtraLight.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-ExtraLight.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-ExtraLight.ttf') format('truetype');
 
   font-weight: 200;
 
@@ -41,8 +39,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-Light.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-Light.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-Light.ttf') format('truetype');
 
   font-weight: 300;
 
@@ -54,8 +51,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-Regular.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
 
   font-weight: 400;
 
@@ -67,8 +63,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-Medium.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-Medium.ttf') format('truetype');
 
   font-weight: 500;
 
@@ -80,8 +75,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-SemiBold.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
 
   font-weight: 600;
 
@@ -93,8 +87,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-Bold.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-Bold.ttf') format('truetype');
 
   font-weight: 700;
 
@@ -106,8 +99,7 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-ExtraBold.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-ExtraBold.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
 
   font-weight: 800;
 
@@ -119,12 +111,121 @@ Text Domain: konzeptebau
 @font-face {
   font-family: 'Poppins';
 
-  src: url('../fonts/poppins/Poppins-Black.woff2') format('woff2'),
-       url('../fonts/poppins/Poppins-Black.woff') format('woff');
+  src: url('./assets/fonts/poppins/Poppins-Black.ttf') format('truetype');
 
   font-weight: 900;
 
   font-style: normal;
+
+  font-display: swap;
+}
+
+/* Poppins Italic Font Family */
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-ThinItalic.ttf') format('truetype');
+
+  font-weight: 100;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+
+  font-weight: 200;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-LightItalic.ttf') format('truetype');
+
+  font-weight: 300;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-Italic.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-MediumItalic.ttf') format('truetype');
+
+  font-weight: 500;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-BoldItalic.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('./assets/fonts/poppins/Poppins-BlackItalic.ttf') format('truetype');
+
+  font-weight: 900;
+
+  font-style: italic;
 
   font-display: swap;
 }
@@ -1034,10 +1135,6 @@ p {
   margin-top: 0.5rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -1060,6 +1157,10 @@ p {
 
 .h-12 {
   height: 3rem;
+}
+
+.h-16 {
+  height: 4rem;
 }
 
 .h-20 {
@@ -1086,12 +1187,12 @@ p {
   height: 100%;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .w-12 {
   width: 3rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .w-3 {
@@ -1112,10 +1213,6 @@ p {
 
 .w-full {
   width: 100%;
-}
-
-.w-16 {
-  width: 4rem;
 }
 
 .max-w-2xl {
@@ -1219,6 +1316,10 @@ p {
   border-radius: 0.25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1231,34 +1332,25 @@ p {
   border-radius: 0.125rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
+.border {
+  border-width: 1px;
 }
 
 .border-2 {
   border-width: 2px;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-t {
   border-top-width: 1px;
+}
+
+.border-custom-orange\/20 {
+  border-color: rgb(231 94 42 / 0.2);
 }
 
 .border-gray-800 {
   --tw-border-opacity: 1;
   border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
-}
-
-.border-red-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(254 226 226 / var(--tw-border-opacity, 1));
-}
-
-.border-custom-orange\/20 {
-  border-color: rgb(231 94 42 / 0.2);
 }
 
 .bg-black\/30 {
@@ -1348,10 +1440,6 @@ p {
   padding-top: 2rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1424,13 +1512,14 @@ p {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
-}
-
 .opacity-0 {
   opacity: 0;
+}
+
+.shadow-\[0_2px_15px_-3px_rgba\(0\2c 0\2c 0\2c 0\.07\)\2c 0_10px_20px_-2px_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
+  --tw-shadow: 0 2px 15px -3px rgba(0,0,0,0.07),0 10px 20px -2px rgba(0,0,0,0.04);
+  --tw-shadow-colored: 0 2px 15px -3px var(--tw-shadow-color), 0 10px 20px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg {
@@ -1451,18 +1540,6 @@ p {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0_2px_15px_-3px_rgba\(0\2c 0\2c 0\2c 0\.07\)\2c 0_10px_20px_-2px_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
-  --tw-shadow: 0 2px 15px -3px rgba(0,0,0,0.07),0 10px 20px -2px rgba(0,0,0,0.04);
-  --tw-shadow-colored: 0 2px 15px -3px var(--tw-shadow-color), 0 10px 20px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1475,14 +1552,14 @@ p {
   transition-duration: 150ms;
 }
 
-.transition-transform {
-  transition-property: transform;
+.transition-shadow {
+  transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.transition-shadow {
-  transition-property: box-shadow;
+.transition-transform {
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1515,11 +1592,6 @@ p {
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:shadow-\[0_8px_20px_-4px_rgba\(0\2c 0\2c 0\2c 0\.1\)\2c 0_10px_20px_-2px_rgba\(0\2c 0\2c 0\2c 0\.04\)\]:hover {
@@ -1559,10 +1631,6 @@ p {
 
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px;
   }
 
   .md\:mb-0 {
@@ -1606,11 +1674,6 @@ p {
     padding-bottom: 6rem;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -1628,12 +1691,12 @@ p {
 }
 
 @media (min-width: 1024px) {
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
