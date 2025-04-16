@@ -44,25 +44,25 @@
         <!-- Bottom Bar -->
         <div class="mt-12 pt-8 border-t border-gray-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-black">
+                <p class="text-sm text-black mb-4 md:mb-0">
                     © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Alle Rechte vorbehalten.
                 </p>
-                <div class="mt-4 md:mt-0">
+                <div class="md:ml-4">
                     <?php
                     wp_nav_menu(
                         array(
                             'theme_location' => 'footer-menu',
                             'container'      => false,
-                            'menu_class'     => 'flex space-x-6 text-sm text-black',
+                            'menu_class'     => 'flex items-center space-x-6 text-sm text-black',
                             'fallback_cb'    => function() {
-                                echo '<ul class="flex space-x-6 text-sm text-black">
-                                    <li><a href="/impressum" class="hover:text-white">Impressum</a></li>
-                                    <li><a href="/datenschutz" class="hover:text-white">Datenschutz</a></li>
-                                    <li><a href="/agb" class="hover:text-white">AGB</a></li>
+                                echo '<ul class="flex items-center space-x-6 text-sm text-black">
+                                    <li><a href="/impressum" class="hover:text-custom-orange">Impressum</a></li>
+                                    <li><a href="/datenschutz" class="hover:text-custom-orange">Datenschutz</a></li>
+                                    <li><a href="/agb" class="hover:text-custom-orange">AGB</a></li>
                                 </ul>';
                             },
                             'depth'          => 1,
-                            'add_li_class'   => 'hover:text-white',
+                            'add_li_class'   => 'hover:text-custom-orange',
                         )
                     );
                     ?>
