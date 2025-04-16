@@ -99,14 +99,13 @@
             </nav>
 
             <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50">
+            <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-white shadow-lg z-50">
                 <div class="container mx-auto px-4 py-4">
                     <div class="flex flex-col space-y-4">
-                        <a href="/" class="text-gray-700 hover:text-custom-orange">Startseite</a>
-                        <a href="/leistungen" class="text-gray-700 hover:text-custom-orange">Leistungen</a>
-                        <a href="/referenzen" class="text-gray-700 hover:text-custom-orange">Referenzen</a>
-                        <a href="/karriere" class="text-gray-700 hover:text-custom-orange">Jobs</a>
-                        <a href="#contact" class="text-gray-700 hover:text-custom-orange">Kontakt</a>
+                        <a href="<?php echo home_url(); ?>#services" class="text-gray-700 hover:text-custom-orange">Leistungen</a>
+                        <a href="<?php echo home_url(); ?>#references" class="text-gray-700 hover:text-custom-orange">Referenzen</a>
+                        <a href="<?php echo home_url(); ?>#career" class="text-gray-700 hover:text-custom-orange">Jobs</a>
+                        <a href="<?php echo home_url(); ?>#contact" class="text-gray-700 hover:text-custom-orange">Kontakt</a>
                     </div>
                 </div>
             </div>
