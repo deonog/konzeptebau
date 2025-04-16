@@ -89,5 +89,22 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
     });
+
+    // Load More Services
+    const loadMoreButton = document.getElementById('load-more-services');
+    if (loadMoreButton) {
+        loadMoreButton.addEventListener('click', function() {
+            const hiddenServices = document.querySelectorAll('.service-item.hidden');
+            hiddenServices.forEach(service => {
+                service.classList.remove('hidden');
+                service.style.animation = 'fadeIn 0.5s ease-in-out';
+            });
+            
+            // Hide the button if all services are shown
+            if (document.querySelectorAll('.service-item.hidden').length === 0) {
+                loadMoreButton.style.display = 'none';
+            }
+        });
+    }
 });
 

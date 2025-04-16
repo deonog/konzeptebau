@@ -5,7 +5,9 @@ module.exports = {
       './template-parts/**/*.php',
       './inc/**/*.php',
       './archive-*.php',
-      './single-*.php'
+      './single-*.php',
+      './**/*.php',
+      './src/**/*.js',
     ],
     theme: {
       extend: {
@@ -18,10 +20,11 @@ module.exports = {
           'custom-orange': '#E75E2A',
         },
         fontFamily: {
-          'sans': ['Inter', 'sans-serif'],
-          'serif': ['Merriweather', 'serif'],
-          'display': ['Montserrat', 'sans-serif'],
-          'body': ['Open Sans', 'sans-serif'],
+          'sans': ['Poppins', 'sans-serif'],
+          'serif': ['Poppins', 'sans-serif'],
+          'display': ['Poppins', 'sans-serif'],
+          'body': ['Poppins', 'sans-serif'],
+          'poppins': ['Poppins', 'sans-serif'],
         },
         backgroundColor: {
           'primary': '#E75E2A',
@@ -35,7 +38,18 @@ module.exports = {
           '15': '0.15',
           '35': '0.35',
           '65': '0.65',
-         }
+         },
+        fontWeight: {
+          thin: '100',
+          extralight: '200',
+          light: '300',
+          normal: '400',
+          medium: '500',
+          semibold: '600',
+          bold: '700',
+          extrabold: '800',
+          black: '900',
+        },
         // Add your custom theme configurations here
       },
     },

@@ -55,66 +55,37 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group">
-                    <div class="aspect-square overflow-hidden mb-4 relative">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Holzbau" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
-                            <p class="text-white text-center">
-                                Professionelle Holzbauarbeiten für Ihr Zuhause. Von Dachstühlen bis zu Carports - wir setzen Ihre Wünsche in die Tat um.    
-                            </p>
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-semibold">→ Holzbau</h4>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">  
+                <?php
+                $services = get_posts(array(
+                    'post_type' => 'services',
+                    'numberposts' => -1
+                ));
 
-                <div class="group">
-                    <div class="aspect-square overflow-hidden mb-4 relative">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Bedachung" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
-                            <p class="text-white text-center">
-                                Kompetente Dachdeckung und -sanierung. Wir sorgen für ein dichtes und langlebiges Dach über Ihrem Kopf.
-                            </p>
-                        </div>
+                if (empty($services)) : ?>
+                    <div class="col-span-full text-left py-12">
+                        <p class="text-gray-600 text-lg">
+                            <?php echo get_theme_mod('no_services_text', 'Aktuell sind noch keine Leistungen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
+                        </p>
                     </div>
-                    <h4 class="text-lg font-semibold">→ Bedachung</h4>
-                </div>
-
-                <div class="group">
-                    <div class="aspect-square overflow-hidden mb-4 relative">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Innenausbau" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
-                            <p class="text-white text-center">
-                                Individuelle Innenausbau-Lösungen. Von Treppen bis zu Einbauschränken - wir gestalten Ihren Wohnraum.
-                            </p>
+                <?php else :
+                    foreach ($services as $service) : ?>      
+                        <div class="group">
+                            <div class="aspect-square overflow-hidden mb-4 relative">
+                                <img src="<?php echo get_the_post_thumbnail_url($service->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
+                                     alt="<?php echo esc_attr($service->post_title); ?>" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                                    <p class="text-white text-center">
+                                        <?php echo get_the_excerpt($service->ID); ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-semibold">→ <?php echo esc_html($service->post_title); ?></h4>
                         </div>
-                    </div>
-                    <h4 class="text-lg font-semibold">→ Innenausbau</h4>
-                </div>
-
-                <div class="group">
-                    <div class="aspect-square overflow-hidden mb-4 relative">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Photovoltaik" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
-                            <p class="text-white text-center">
-                                Moderne Photovoltaik-Anlagen für nachhaltige Energiegewinnung. Wir machen Ihr Zuhause zukunftssicher.
-                            </p>
-                        </div>
-                    </div>
-                    <h4 class="text-lg font-semibold">→ Photovoltaik</h4>
-                </div>
+                    <?php endforeach;
+                endif; ?>
             </div>
         </div>
     </section>
@@ -167,57 +138,36 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group cursor-pointer">
-                    <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Holzbau" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <p class="hidden group-hover-content">
-                            Ein modernes Einfamilienhaus mit nachhaltiger Holzbauweise. Das Projekt umfasste die komplette Erstellung des Dachstuhls und die Montage der Photovoltaikanlage.
-                        </p>
-                    </div>
-                    <h4 class="text-lg font-semibold">→ Holzbau Projekt</h4>
-                </div>
+                <?php
+                $references = get_posts(array(
+                    'post_type' => 'references',
+                    'numberposts' => -1
+                ));
 
-                <div class="group cursor-pointer">
-                    <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Bedachung" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <p class="hidden group-hover-content">
-                            Komplette Dachsanierung eines historischen Gebäudes in Lastrup. Wir haben das Dach neu eingedeckt und dabei die historische Optik erhalten.
+                if (empty($references)) : ?>
+                    <div class="col-span-full text-left py-12">
+                        <p class="text-gray-600 text-lg">
+                            <?php echo get_theme_mod('no_references_text', 'Aktuell sind noch keine Referenzen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
                         </p>
                     </div>
-                    <h4 class="text-lg font-semibold">→ Dachsanierung</h4>
-                </div>
-
-                <div class="group cursor-pointer">
-                    <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Innenausbau" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <p class="hidden group-hover-content">
-                            Moderner Innenausbau mit individuellen Holzelementen. Das Projekt umfasste die Erstellung von Einbauschränken, Treppen und Wandverkleidungen.
-                        </p>
-                    </div>
-                    <h4 class="text-lg font-semibold">→ Innenausbau</h4>
-                </div>
-
-                <div class="group cursor-pointer">
-                    <div class="aspect-square overflow-hidden mb-4">
-                        <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                             alt="Photovoltaik" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <p class="hidden group-hover-content">
-                            Installation einer modernen Photovoltaikanlage mit Speicherlösung. Das System deckt den kompletten Strombedarf des Hauses.
-                        </p>
-                    </div>
-                    <h4 class="text-lg font-semibold">→ Photovoltaik</h4>
-                </div>
+                <?php else :
+                    foreach ($references as $reference) : ?>      
+                        <div class="group">
+                            <div class="aspect-square overflow-hidden mb-4 relative">
+                                <img src="<?php echo get_the_post_thumbnail_url($reference->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
+                                     alt="<?php echo esc_attr($reference->post_title); ?>" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                                    <p class="text-white text-center">
+                                        <?php echo get_the_excerpt($reference->ID); ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-semibold">→ <?php echo esc_html($reference->post_title); ?></h4>
+                        </div>
+                    <?php endforeach;
+                endif; ?>
             </div>
         </div>
     </section>
