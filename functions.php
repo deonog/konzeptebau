@@ -316,4 +316,106 @@ add_filter('use_block_editor_for_post_type', '__return_false', 10);
 
 require get_template_directory(). '/inc/customizer.php';
 
+/**
+ * Add Service Icon Meta Box
+ */
+function konzeptebau_add_service_icon_meta_box() {
+    add_meta_box(
+        'service_icon_meta_box', // Unique ID
+        'Service Icon Settings', // Box title
+        'konzeptebau_service_icon_meta_box_html', // Content callback, must be of type callable
+        'services', // Post type
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'konzeptebau_add_service_icon_meta_box');
+
+/**
+ * Service Icon Meta Box HTML
+ */
+function konzeptebau_service_icon_meta_box_html($post) {
+    $svg_icon = get_post_meta($post->ID, '_service_svg_icon', true);
+    if (empty($svg_icon)) {
+        $svg_icon = '<svg class="w-8 h-8 text-custom-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 7l-5 5 5 5"/></svg>';
+    }
+    ?>
+    <div class="service-icon-meta-box">
+        <p class="description">Paste your SVG code here. Make sure it's valid SVG markup.</p>
+        <textarea 
+            name="service_svg_icon" 
+            id="service_svg_icon" 
+            rows="4" 
+            style="width: 100%; margin-top: 10px;"
+        ><?php echo esc_textarea($svg_icon); ?></textarea>
+        <div class="icon-preview" style="margin-top: 10px;">
+            <p><strong>Preview:</strong></p>
+            <div style="padding: 10px; border: 1px solid #ddd; display: inline-block; margin-top: 5px;">
+                <?php echo wp_kses($svg_icon, array(
+                    'svg' => array(
+                        'class' => true,
+                        'viewbox' => true,
+                        'fill' => true,
+                        'stroke' => true,
+                    ),
+                    'path' => array(
+                        'stroke-linecap' => true,
+                        'stroke-linejoin' => true,
+                        'stroke-width' => true,
+                        'd' => true,
+                    ),
+                )); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+
+/**
+ * Save Service Icon Meta Box Data
+ */
+function konzeptebau_save_service_icon_meta_box($post_id) {
+    if (array_key_exists('service_svg_icon', $_POST)) {
+        update_post_meta(
+            $post_id,
+            '_service_svg_icon',
+            wp_kses($_POST['service_svg_icon'], array(
+                'svg' => array(
+                    'class' => true,
+                    'viewbox' => true,
+                    'fill' => true,
+                    'stroke' => true,
+                ),
+                'path' => array(
+                    'stroke-linecap' => true,
+                    'stroke-linejoin' => true,
+                    'stroke-width' => true,
+                    'd' => true,
+                ),
+            ))
+        );
+    }
+}
+add_action('save_post', 'konzeptebau_save_service_icon_meta_box');
+
+// Add JavaScript for live preview
+function konzeptebau_service_icon_admin_script() {
+    $screen = get_current_screen();
+    if ($screen->post_type === 'services') {
+        ?>
+        <script>
+        jQuery(document).ready(function($) {
+            var textarea = $('#service_svg_icon');
+            var preview = $('.icon-preview div');
+            
+            textarea.on('input', function() {
+                preview.html($(this).val());
+            });
+        });
+        </script>
+        <?php
+    }
+}
+add_action('admin_footer', 'konzeptebau_service_icon_admin_script');
+
 ?>

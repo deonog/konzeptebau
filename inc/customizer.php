@@ -224,6 +224,21 @@
             'selector' => '.services-description',
         ) );
 
+        $wp_customize->add_setting('no_services_text', array(
+            'default'  => _x('Aktuell sind noch keine Leistungen verfügbar. Bitte schauen Sie später wieder vorbei.', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('no_services_text', array(
+            'label'  => __('No Services Text', 'konzeptebau'),
+            'section'  => 'Services', 
+            'priority' => 3
+        ));
+
+        $wp_customize->selective_refresh->add_partial('no_services_text', array(
+            'selector' => '.no-services-text',
+        ) );
+
         /* About */
 
         $wp_customize->add_section('About', array(
@@ -327,8 +342,22 @@
         $wp_customize->selective_refresh->add_partial('references_description', array(
             'selector' => '.references-description',
         ) );
-        
 
+        $wp_customize->add_setting('no_references_text', array(
+            'default'  => _x('Aktuell sind noch keine Referenzen verfügbar. Bitte schauen Sie später wieder vorbei.', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('no_references_text', array(
+            'label'  => __('No References Text', 'konzeptebau'),
+            'section'  => 'References', 
+            'priority' => 3
+        ));
+
+        $wp_customize->selective_refresh->add_partial('no_references_text', array(
+            'selector' => '.no-references-text',
+        ) );
+        
         /* Careers */
         $wp_customize->add_section('Careers', array(
             'title' => __('Careers', 'konzeptebau'),

@@ -40,22 +40,17 @@
             <div class="max-w-3xl mb-16">
                 <h2 class="text-2xl md:text-3xl font-bold mb-6">
                     <span class="services-title">
-                        <?php echo get_theme_mod('services_title', 'Zimmerei und Dachdeckerei in Lastrup:'); ?>
+                        <?php echo get_theme_mod('services_title', 'Unsere Leistungen'); ?>
                     </span>
                 </h2>
-                <h3 class="text-xl md:text-2xl mb-4">
-                    <span class="services-subtitle">
-                        <?php echo get_theme_mod('services_subtitle', 'Wir sind Konzepte Bau'); ?>
-                    </span>
-                </h3>
                 <p class="text-gray-700">
                     <span class="services-description">
-                        <?php echo get_theme_mod('services_description', 'Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.'); ?>
+                        <?php echo get_theme_mod('services_description', 'Wir bieten Ihnen professionelle Dienstleistungen mit höchster Qualität und Expertise.'); ?>
                     </span>
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">  
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <?php
                 $services = get_posts(array(
                     'post_type' => 'services',
@@ -63,26 +58,42 @@
                 ));
 
                 if (empty($services)) : ?>
-                    <div class="col-span-full text-left py-12">
-                        <p class="text-gray-600 text-lg">
+                    <div class="col-span-full flex flex-col items-center justify-center py-12">
+                        <p class="text-gray-600 text-lg no-services-text text-center">
                             <?php echo get_theme_mod('no_services_text', 'Aktuell sind noch keine Leistungen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
                         </p>
                     </div>
                 <?php else :
-                    foreach ($services as $service) : ?>      
-                        <div class="group service-item cursor-pointer">
-                            <div class="aspect-square overflow-hidden mb-4 relative">
-                                <img src="<?php echo get_the_post_thumbnail_url($service->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
-                                     alt="<?php echo esc_attr($service->post_title); ?>" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
-                                    <p class="text-white text-center">
-                                        <?php echo get_the_excerpt($service->ID); ?>
-                                    </p>
-                                </div>
+                    foreach ($services as $service) : ?>
+                        <div class="bg-white p-8 rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow duration-300">
+                            <div class="w-16 h-16 mb-6 flex items-center justify-center rounded-full border-2 border-custom-orange/20">
+                                <?php 
+                                    $svg_icon = get_post_meta($service->ID, '_service_svg_icon', true);
+                                    if ($svg_icon) {
+                                        echo wp_kses($svg_icon, array(
+                                            'svg' => array(
+                                                'class' => true,
+                                                'viewbox' => true,
+                                                'fill' => true,
+                                                'stroke' => true,
+                                            ),
+                                            'path' => array(
+                                                'stroke-linecap' => true,
+                                                'stroke-linejoin' => true,
+                                                'stroke-width' => true,
+                                                'd' => true,
+                                            ),
+                                        ));
+                                    } else {
+                                        // Default SVG if none is set
+                                        echo '<svg class="w-8 h-8 text-custom-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 7l-5 5 5 5"/>
+                                            </svg>';
+                                    }
+                                ?>
                             </div>
-                            <h4 class="text-lg font-semibold">→ <?php echo esc_html($service->post_title); ?></h4>
+                            <h3 class="text-xl font-bold mb-4"><?php echo esc_html($service->post_title); ?></h3>
+                            <p class="text-gray-600"><?php echo get_the_excerpt($service->ID); ?></p>
                         </div>
                     <?php endforeach;
                 endif; ?>
@@ -145,8 +156,8 @@
                 ));
 
                 if (empty($references)) : ?>
-                    <div class="col-span-full text-left py-12">
-                        <p class="text-gray-600 text-lg">
+                    <div class="col-span-full flex flex-col items-center justify-center py-12">
+                        <p class="text-gray-600 text-lg no-references-text text-center">
                             <?php echo get_theme_mod('no_references_text', 'Aktuell sind noch keine Referenzen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
                         </p>
                     </div>
