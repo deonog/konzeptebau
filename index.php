@@ -108,7 +108,7 @@
                     </h2>
                     <h3 class="text-xl mb-4">
                         <span class="about-subtitle">
-                            <?php echo get_theme_mod('about_subtitle', 'für hochwertige Lösungen im Holzbau'); ?>
+                            <?php echo get_theme_mod('about_subtitle', 'Für hochwertige Lösungen im Holzbau'); ?>
                         </span>
                     </h3>           
                     <p class="text-gray-700 mb-6">
@@ -158,7 +158,7 @@
                                      alt="<?php echo esc_attr($reference->post_title); ?>" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
-                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 group-hover-content">
                                     <p class="text-white text-center">
                                         <?php echo get_the_excerpt($reference->ID); ?>
                                     </p>
