@@ -20,11 +20,15 @@
                     </span>
                 </h1>
                 <p class="text-lg md:text-xl mb-6">
-                    Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.
+                    <span class="hero-description">
+                        <?php echo get_theme_mod('hero_description', 'Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.'); ?>
+                    </span>
                 </p>
-                <a href="#contact" 
+                <a href="<?php echo home_url(); ?>#contact" 
                    class="inline-block bg-custom-orange hover:bg-custom-orange text-white px-8 py-3 rounded-sm transition-colors">
-                    Jetzt Termin vereinbaren!
+                    <span class="hero-button-text">
+                        <?php echo get_theme_mod('hero_button_text', 'Jetzt Termin vereinbaren!'); ?>
+                    </span>
                 </a>
             </div>
         </div>
@@ -34,10 +38,20 @@
     <section class="py-16 md:py-24" id="services">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">Zimmerei und Dachdeckerei in Lastrup:</h2>
-                <h3 class="text-xl md:text-2xl mb-4">Das A-Team Holzbau</h3>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                    <span class="services-title">
+                        <?php echo get_theme_mod('services_title', 'Zimmerei und Dachdeckerei in Lastrup:'); ?>
+                    </span>
+                </h2>
+                <h3 class="text-xl md:text-2xl mb-4">
+                    <span class="services-subtitle">
+                        <?php echo get_theme_mod('services_subtitle', 'Wir sind Konzepte Bau'); ?>
+                    </span>
+                </h3>
                 <p class="text-gray-700">
-                    Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.
+                    <span class="services-description">
+                        <?php echo get_theme_mod('services_description', 'Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.'); ?>
+                    </span>
                 </p>
             </div>
 
@@ -50,7 +64,7 @@
                         />
                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
                             <p class="text-white text-center">
-                                Professionelle Holzbauarbeiten für Ihr Zuhause. Von Dachstühlen bis zu Carports - wir setzen Ihre Wünsche in die Tat um.
+                                Professionelle Holzbauarbeiten für Ihr Zuhause. Von Dachstühlen bis zu Carports - wir setzen Ihre Wünsche in die Tat um.    
                             </p>
                         </div>
                     </div>
@@ -110,13 +124,17 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                         alt="Wood texture" 
+                    <img src="<?php echo get_theme_mod('about_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
+                         alt="about image" 
                          class="w-full rounded-lg shadow-lg"
                     />
                 </div>
                 <div class="order-1 md:order-2">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6">Ihr Dachdecker und Zimmerer</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                        <span class="about-title">
+                            <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
+                        </span>
+                    </h2>
                     <h3 class="text-xl mb-4">für hochwertige Lösungen im Holzbau</h3>
                     <p class="text-gray-700 mb-6">
                         Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. 
@@ -233,11 +251,11 @@
                 <div class="space-y-4 flex flex-col items-center">
                     <p class="flex items-center">
                         <span class="w-8">📞</span>
-                        <a href="tel:+4944954444" class="hover:text-custom-orange">+49 449 544 44</a>
+                        <a href="tel:<?php echo get_theme_mod('phone', '+49 123 456 789'); ?>" class="hover:text-custom-orange"><?php echo get_theme_mod('phone', '+49 123 456 789'); ?></a>   
                     </p>
                     <p class="flex items-center">
                         <span class="w-8">✉️</span>
-                        <a href="mailto:info@team-holzbau.de" class="hover:text-custom-orange">info@team-holzbau.de</a>
+                        <a href="mailto:<?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?>" class="hover:text-custom-orange"><?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?></a>
                     </p>
                 </div>
             </div>

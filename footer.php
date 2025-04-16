@@ -3,20 +3,20 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo and Contact -->
             <div class="col-span-1 md:col-span-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-white.png" 
+                <img src="<?php echo get_theme_mod('logo', get_bloginfo('template_url').'/assets/images/logo.webp'); ?>" 
                      alt="<?php bloginfo('name'); ?>" 
                      class="h-12 w-auto mb-6"
                 />
                 <div class="space-y-4">
                     <p class="flex items-center">
-                        Musterstraße 123<br>
-                        49688 Lastrup
+                        <?php echo get_theme_mod('street', 'Musterstraße 123'); ?><br>
+                        <?php echo get_theme_mod('zip', '49688'); ?> <?php echo get_theme_mod('city', 'Lastrup'); ?>
                     </p>
                     <p class="flex items-center">
-                        <a href="tel:+4944954444" class="hover:text-custom-orange">+49 449 544 44</a>
+                        <a href="tel:<?php echo get_theme_mod('phone', '+49 123 456 789'); ?>" class="hover:text-custom-orange"><?php echo get_theme_mod('phone', '+49 123 456 789'); ?></a>
                     </p>
                     <p class="flex items-center">
-                        <a href="mailto:info@team-holzbau.de" class="hover:text-custom-orange">info@team-holzbau.de</a>
+                        <a href="mailto:<?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?>" class="hover:text-custom-orange"><?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?></a>
                     </p>
                 </div>
             </div>
@@ -36,9 +36,7 @@
             <div>
                 <h3 class="text-lg font-semibold mb-4">Öffnungszeiten</h3>
                 <ul class="space-y-2">
-                    <li>Mo. - Fr.: 08:00 - 17:00</li>
-                    <li>Sa.: Nach Vereinbarung</li>
-                    <li>So.: Geschlossen</li>
+                    <li><?php echo get_theme_mod('opening_hours', 'Mo - Fr: 09:00 - 17:00'); ?></li>
                 </ul>
             </div>
         </div>
@@ -77,7 +75,7 @@
 <!-- Floating Action Buttons -->
 <div class="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4 hidden md:block">
     <!-- Phone -->
-    <a href="tel:04953 4829996" 
+    <a href="tel:<?php echo get_theme_mod('phone', '+49 123 456 789'); ?>" 
        class="w-12 h-12 bg-custom-orange hover:bg-custom-orange rounded flex items-center justify-center transition-colors duration-300"
        title="Anrufen">
         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -86,7 +84,7 @@
     </a>
 
     <!-- Email -->
-    <a href="mailto:info@nordlicht-elektrotechnik.de" 
+    <a href="mailto:<?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?>" 
        class="w-12 h-12 bg-custom-orange hover:bg-custom-orange rounded flex items-center justify-center transition-colors duration-300 mt-2"
        title="E-Mail schreiben">
         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">

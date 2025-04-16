@@ -23,13 +23,13 @@
                         <svg class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span>Mo - So: 06:00 - 22:00 Uhr</span>
+                        <span><?php echo get_theme_mod('opening_hours', 'Mo - So: 06:00 - 22:00 Uhr'); ?></span>
                     </div>
-                    <a href="mailto:info@a-team-holzbau.de" class="flex items-center hover:text-gray-200">
+                    <a href="mailto:<?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?>" class="flex items-center hover:text-gray-200">
                         <svg class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        info@a-team-holzbau.de
+                        <?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?>
                     </a>
                 </div>
                 <button id="close-announcement" class="p-1 hover:text-gray-200 focus:outline-none" aria-label="Close announcement">
@@ -63,7 +63,7 @@
 
                 <!-- Desktop CTA -->
                 <div class="hidden md:block">
-                    <a href="mailto:info@a-team-holzbau.de" class="flex items-center text-custom-orange font-semibold group">
+                    <a href="<?php echo home_url(); ?>#contact" class="flex items-center text-custom-orange font-semibold group">
                         Jetzt kontaktieren!
                         <svg class="w-3 h-3 ml-1 transform group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
