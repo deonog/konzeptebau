@@ -243,6 +243,177 @@
         $wp_customize->selective_refresh->add_partial('about_title', array(
             'selector' => '.about-title',
         ) );
+
+
+        $wp_customize->add_setting('about_subtitle', array(
+            'default'  => _x('Für hochwertige Lösungen im Holzbau', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('about_subtitle', array(
+            'label'  => __('About Subtitle', 'konzeptebau'),
+            'section'  => 'About', 
+            'priority' => 3
+        ));
+
+        $wp_customize->selective_refresh->add_partial('about_subtitle', array(
+            'selector' => '.about-subtitle',
+        ) );
+
+        $wp_customize->add_setting('about_description', array(
+            'default'  => _x('Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('about_description', array(
+            'label'  => __('About Description', 'konzeptebau'),
+            'section'  => 'About', 
+            'priority' => 4
+        ));
+        
+        $wp_customize->selective_refresh->add_partial('about_description', array(
+            'selector' => '.about-description',
+        ) );
+
+        /* References */
+
+        $wp_customize->add_section('References', array(
+            'title' => __('References', 'konzeptebau'),
+            'description'  => sprintf(__('References','konzeptebau')),
+            'priority'  => 130
+        ));
+
+        $wp_customize->add_setting('references_title', array(
+            'default'  => _x('Zimmerei und Dachdeckerei in Lastrup:', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('references_title', array(
+            'label'  => __('References Title', 'konzeptebau'),
+            'section'  => 'References', 
+            'priority' => 1
+        ));
+
+        $wp_customize->selective_refresh->add_partial('references_title', array(
+            'selector' => '.references-title',
+        ) );
+
+        $wp_customize->add_setting('references_description', array(
+            'default'  => _x('Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('references_description', array(   
+            'label'  => __('References Description', 'konzeptebau'),
+            'section'  => 'References', 
+            'priority' => 2
+        ));
+        
+        $wp_customize->selective_refresh->add_partial('references_description', array(
+            'selector' => '.references-description',
+        ) );
+        
+
+        /* Careers */
+        $wp_customize->add_section('Careers', array(
+            'title' => __('Careers', 'konzeptebau'),
+            'description'  => sprintf(__('Careers','konzeptebau')),
+            'priority'  => 130
+        ));
+
+        $wp_customize->add_setting('careers_img', array(
+            'default'  => get_bloginfo('template_directory').'/assets/images/placeholder.webp',
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'careers_img', array(
+            'label'  => __('Careers Image', 'konzeptebau'),
+            'section'  => 'Careers', 
+            'settings'  => 'careers_img',
+            'priority' => 1
+        )));
+
+        $wp_customize->add_setting('careers_title', array(
+            'default'  => _x('Wir suchen neue Mitarbeiter!', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('careers_title', array(
+            'label'  => __('Careers Title', 'konzeptebau'),
+            'section'  => 'Careers', 
+            'priority' => 2
+        ));
+
+        $wp_customize->selective_refresh->add_partial('careers_title', array(
+            'selector' => '.careers-title',
+        ) );
+
+        $wp_customize->add_setting('careers_description', array(
+            'default'  => _x('Als Meister- und Ausbildungsbetrieb ist das A-Team Holzbau ständig auf der Suche nach motivierten Mitarbeitern.', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('careers_description', array(
+            'label'  => __('Careers Description', 'konzeptebau'),
+            'section'  => 'Careers', 
+            'priority' => 3
+        ));
+
+        $wp_customize->selective_refresh->add_partial('careers_description', array(
+            'selector' => '.careers-description',
+        ) );
+
+        $wp_customize->add_setting('careers_button_text', array(
+            'default'  => _x('Mehr über die Karrieremöglichkeiten', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('careers_button_text', array(
+            'label'  => __('Careers Button Text', 'konzeptebau'),
+            'section'  => 'Careers', 
+            'priority' => 4
+        ));
+        
+        $wp_customize->selective_refresh->add_partial('careers_button_text', array(
+            'selector' => '.careers-button-text',
+        ) );    
+        
+        /* Contact */
+        $wp_customize->add_section('Contact', array(
+            'title' => __('Contact', 'konzeptebau'),
+            'description'  => sprintf(__('Contact','konzeptebau')),
+            'priority'  => 130
+        )); 
+
+        $wp_customize->add_setting('contact_title', array(
+            'default'  => _x('Unsere Zimmerei und Dachdeckerei ist auch im Notfall für Sie da', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        )); 
+
+        $wp_customize->add_control('contact_title', array(
+            'label'  => __('Contact Title', 'konzeptebau'),
+            'section'  => 'Contact', 
+            'priority' => 1
+        ));
+
+        $wp_customize->selective_refresh->add_partial('contact_title', array(
+            'selector' => '.contact-title',
+        ) );  
+
+        $wp_customize->add_setting('contact_description', array(
+            'default'  => _x('Sie haben ein dringendes Anliegen? Kontaktieren Sie uns noch heute!', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        )); 
+
+        $wp_customize->add_control('contact_description', array(
+            'label'  => __('Contact Description', 'konzeptebau'),
+            'section'  => 'Contact', 
+            'priority' => 2
+        ));
+
+        $wp_customize->selective_refresh->add_partial('contact_description', array(
+            'selector' => '.contact-description',
+        ) );
     }
 
     add_action('customize_register', 'wpb_customize_register');

@@ -135,13 +135,15 @@
                             <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
                         </span>
                     </h2>
-                    <h3 class="text-xl mb-4">für hochwertige Lösungen im Holzbau</h3>
+                    <h3 class="text-xl mb-4">
+                        <span class="about-subtitle">
+                            <?php echo get_theme_mod('about_subtitle', 'für hochwertige Lösungen im Holzbau'); ?>
+                        </span>
+                    </h3>           
                     <p class="text-gray-700 mb-6">
-                        Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. 
-                        Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen.
-                    </p>
-                    <p class="text-gray-700">
-                        Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.
+                        <span class="about-description">
+                            <?php echo get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.'); ?>
+                        </span>
                     </p>
                 </div>
             </div>
@@ -152,9 +154,15 @@
     <section class="py-16 md:py-24" id="references">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">Unsere Referenzen</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                    <span class="references-title">
+                        <?php echo get_theme_mod('references_title', 'Unsere Referenzen'); ?>
+                    </span>
+                </h2>
                 <p class="text-gray-700">
-                    Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.
+                    <span class="references-description">
+                        <?php echo get_theme_mod('references_description', 'Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.'); ?>
+                    </span>
                 </p>
             </div>
 
@@ -219,17 +227,25 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6">Wir suchen neue Mitarbeiter!</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                        <span class="careers-title">
+                            <?php echo get_theme_mod('careers_title', 'Wir suchen neue Mitarbeiter!'); ?>
+                        </span>
+                    </h2>   
                     <p class="text-gray-700 mb-6">
-                        Als Meister- und Ausbildungsbetrieb ist das A-Team Holzbau ständig auf der Suche nach motivierten Mitarbeitern.
+                        <span class="careers-description">
+                            <?php echo get_theme_mod('careers_description', 'Als Meister- und Ausbildungsbetrieb ist das A-Team Holzbau ständig auf der Suche nach motivierten Mitarbeitern.'); ?>
+                        </span>
                     </p>
                     <a href="/karriere" 
                        class="inline-block bg-custom-orange hover:bg-custom-orange text-white px-8 py-3 rounded-sm transition-colors">
-                        Mehr über die Karrieremöglichkeiten
+                        <span class="careers-button-text">
+                            <?php echo get_theme_mod('careers_button_text', 'Mehr über die Karrieremöglichkeiten'); ?>
+                        </span>
                     </a>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
+                    <img src="<?php echo get_theme_mod('careers_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
                          alt="Career" 
                          class="w-full rounded-lg shadow-lg"
                     />
@@ -243,10 +259,14 @@
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl md:text-3xl font-bold mb-6">
-                    Unsere Zimmerei und Dachdeckerei ist auch im Notfall für Sie da
+                    <span class="contact-title">
+                        <?php echo get_theme_mod('contact_title', 'Unsere Zimmerei und Dachdeckerei ist auch im Notfall für Sie da'); ?>
+                    </span>
                 </h2>
                 <p class="text-gray-700 mb-6">
-                    Sie haben ein dringendes Anliegen? Kontaktieren Sie uns noch heute!
+                    <span class="contact-description">
+                        <?php echo get_theme_mod('contact_description', 'Sie haben ein dringendes Anliegen? Kontaktieren Sie uns noch heute!'); ?>
+                    </span>
                 </p>
                 <div class="space-y-4 flex flex-col items-center">
                     <p class="flex items-center">
