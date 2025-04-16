@@ -10,6 +10,125 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: konzeptebau
 */
 
+/* Poppins Font Family */
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-Thin.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-Thin.woff') format('woff');
+
+  font-weight: 100;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-ExtraLight.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-ExtraLight.woff') format('woff');
+
+  font-weight: 200;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-Light.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-Light.woff') format('woff');
+
+  font-weight: 300;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-Regular.woff') format('woff');
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-Medium.woff') format('woff');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-SemiBold.woff') format('woff');
+
+  font-weight: 600;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-Bold.woff') format('woff');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-ExtraBold.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-ExtraBold.woff') format('woff');
+
+  font-weight: 800;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+
+  src: url('../fonts/poppins/Poppins-Black.woff2') format('woff2'),
+       url('../fonts/poppins/Poppins-Black.woff') format('woff');
+
+  font-weight: 900;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 /* 
 Note: Your actual styles will be in dist/css/style.css 
 This file is just for WordPress theme information
@@ -171,7 +290,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -613,7 +732,175 @@ video {
   padding-right: 1rem;
 }
 
+/* Typography */
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    margin-bottom: 2.5rem;
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    margin-bottom: 1.25rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h4 {
+    margin-bottom: 1.25rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h5 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h5 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+h6 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h6 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h6 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  p {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 /* Add your custom component styles here */
+
+.service-item {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.service-item:hover {
+  --tw-translate-y: -4px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 
 /* Desktop card styles */
 
@@ -710,6 +997,10 @@ video {
   grid-column: span 1 / span 1;
 }
 
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -783,6 +1074,10 @@ video {
   height: 1.25rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-\[60vh\] {
   height: 60vh;
 }
@@ -823,6 +1118,10 @@ video {
   max-width: 48rem;
 }
 
+.max-w-none {
+  max-width: none;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -850,6 +1149,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -965,6 +1268,10 @@ video {
   padding: 0.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
@@ -977,6 +1284,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-16 {
@@ -1003,6 +1315,10 @@ video {
   padding-top: 2rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1010,6 +1326,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -1050,6 +1371,16 @@ video {
   color: rgb(231 94 42 / var(--tw-text-opacity, 1));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -1076,6 +1407,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1098,40 +1435,11 @@ video {
   transition-duration: 300ms;
 }
 
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Custom styles that use Tailwind classes */
-
-/* Parallax Effect */
-
-.parallax-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.parallax-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  will-change: transform;
-  transition: transform 0.1s ease-out;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .parallax-container img {
-    transform: translateY(0) scale(1.1);
-  }
-}
-
-/* Smooth scrolling */
-
-html {
-  scroll-behavior: smooth;
-}
 
 .hover\:bg-custom-orange:hover {
   --tw-bg-opacity: 1;
@@ -1146,6 +1454,11 @@ html {
 .hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
@@ -1250,111 +1563,3 @@ html {
   }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Poppins Font Family */
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-Thin.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-ExtraLight.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-Light.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-ExtraBold.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../fonts/poppins/Poppins-Black.woff2') format('woff2'),
-         url('../fonts/poppins/Poppins-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Apply Poppins to the website */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Font weight utilities */
-.font-thin { font-weight: 100; }
-.font-extralight { font-weight: 200; }
-.font-light { font-weight: 300; }
-.font-normal { font-weight: 400; }
-.font-medium { font-weight: 500; }
-.font-semibold { font-weight: 600; }
-.font-bold { font-weight: 700; }
-.font-extrabold { font-weight: 800; }
-.font-black { font-weight: 900; }
