@@ -6,15 +6,19 @@
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
             <div class="parallax-container absolute inset-0">
-                <img src="https://media.istockphoto.com/id/1147544807/de/vektor/miniaturbild-vektorgrafik.jpg?s=612x612&w=0&k=20&c=IIK_u_RTeRFyL6kB1EMzBufT4H7MYT3g04sz903fXAk=" 
-                     alt="Aerial view of house" 
+                <img src="<?php echo get_theme_mod('hero_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
+                     alt="hero image" 
                      class="parallax-image w-full h-full object-cover"
                 />
             </div>
         </div>
         <div class="relative container mx-auto px-4 h-full flex items-center z-20">
             <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Holzbau auf aller höchsten Niveau!</h1>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    <span class="hero-title">
+                        <?php echo get_theme_mod('hero_title', 'Holzbau auf aller höchsten Niveau!'); ?>
+                    </span>
+                </h1>
                 <p class="text-lg md:text-xl mb-6">
                     Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.
                 </p>

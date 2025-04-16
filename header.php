@@ -47,7 +47,7 @@
             <nav class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="<?php echo home_url(); ?>" class="flex-shrink-0">
-                    <img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.png" 
+                    <img src="<?php echo get_theme_mod('logo', get_bloginfo('template_url').'/assets/images/logo.webp'); ?>" 
                          alt="<?php bloginfo('name'); ?>" 
                          class="h-12 w-auto"
                     />
@@ -63,8 +63,8 @@
 
                 <!-- Desktop CTA -->
                 <div class="hidden md:block">
-                    <a href="tel:+4944954444" class="flex items-center text-custom-orange font-semibold group">
-                        Jetzt anrufen!
+                    <a href="mailto:info@a-team-holzbau.de" class="flex items-center text-custom-orange font-semibold group">
+                        Jetzt kontaktieren!
                         <svg class="w-3 h-3 ml-1 transform group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                         </svg>

@@ -195,4 +195,7 @@ register_activation_hook( __FILE__, 'custom_services_rewrite_flush' );
  */
 add_filter('use_block_editor_for_post', '__return_false', 10);
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
-?>
+
+// Customizer File
+
+require get_template_directory(). '/inc/customizer.php';
