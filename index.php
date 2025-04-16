@@ -2,7 +2,7 @@
 
 <main class="overflow-hidden">
     <!-- Hero Section -->
-    <section class="hero-section relative h-[80vh] md:h-screen overflow-hidden">
+    <section class="hero-section relative h-[60vh] md:h-[80vh] overflow-hidden">
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
             <div class="parallax-container absolute inset-0">
@@ -15,8 +15,11 @@
         <div class="relative container mx-auto px-4 h-full flex items-center z-20">
             <div class="max-w-2xl text-white">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Holzbau auf aller höchsten Niveau!</h1>
+                <p class="text-lg md:text-xl mb-6">
+                    Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.
+                </p>
                 <a href="#contact" 
-                   class="inline-block bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-sm transition-colors">
+                   class="inline-block bg-custom-orange hover:bg-custom-orange text-white px-8 py-3 rounded-sm transition-colors">
                     Jetzt Termin vereinbaren!
                 </a>
             </div>
@@ -199,7 +202,7 @@
                         Als Meister- und Ausbildungsbetrieb ist das A-Team Holzbau ständig auf der Suche nach motivierten Mitarbeitern.
                     </p>
                     <a href="/karriere" 
-                       class="inline-block bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-sm transition-colors">
+                       class="inline-block bg-custom-orange hover:bg-custom-orange text-white px-8 py-3 rounded-sm transition-colors">
                         Mehr über die Karrieremöglichkeiten
                     </a>
                 </div>
@@ -226,11 +229,11 @@
                 <div class="space-y-4 flex flex-col items-center">
                     <p class="flex items-center">
                         <span class="w-8">📞</span>
-                        <a href="tel:+4944954444" class="hover:text-red-700">+49 449 544 44</a>
+                        <a href="tel:+4944954444" class="hover:text-custom-orange">+49 449 544 44</a>
                     </p>
                     <p class="flex items-center">
                         <span class="w-8">✉️</span>
-                        <a href="mailto:info@team-holzbau.de" class="hover:text-red-700">info@team-holzbau.de</a>
+                        <a href="mailto:info@team-holzbau.de" class="hover:text-custom-orange">info@team-holzbau.de</a>
                     </p>
                 </div>
             </div>

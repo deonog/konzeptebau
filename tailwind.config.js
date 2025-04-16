@@ -10,11 +10,12 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          'primary': '#000000',
-          'secondary': '#000000',
-          'tertiary': '#000000',
-          'quaternary': '#000000',
-          'quinary': '#000000',
+          'primary': '#E75E2A',
+          'secondary': '#E75E2A',
+          'tertiary': '#E75E2A',
+          'quaternary': '#E75E2A',
+          'quinary': '#E75E2A',
+          'custom-orange': '#E75E2A',
         },
         fontFamily: {
           'sans': ['Inter', 'sans-serif'],
@@ -23,11 +24,12 @@ module.exports = {
           'body': ['Open Sans', 'sans-serif'],
         },
         backgroundColor: {
-          'primary': '#000000',
-          'secondary': '#000000',
-          'tertiary': '#000000',
-          'quaternary': '#000000',
-          'quinary': '#000000',
+          'primary': '#E75E2A',
+          'secondary': '#E75E2A',
+          'tertiary': '#E75E2A',
+          'quaternary': '#E75E2A',
+          'quinary': '#E75E2A',
+          'custom-orange': '#E75E2A',
         },
         opacity: {
           '15': '0.15',

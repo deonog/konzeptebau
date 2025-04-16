@@ -15,7 +15,7 @@
     <?php wp_body_open(); ?>
     
     <!-- Announcement Bar -->
-    <div id="announcement-bar" class="w-full bg-red-700 text-white py-2 hidden md:block">
+    <div id="announcement-bar" class="w-full bg-custom-orange text-white py-2 hidden md:block">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between">
                 <div class="flex-1 flex items-center justify-center space-x-6 text-sm">
@@ -55,15 +55,15 @@
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center justify-center flex-1 space-x-8">
-                    <a href="<?php echo home_url(); ?>#services" class="text-gray-700 hover:text-red-700">Leistungen</a>
-                    <a href="<?php echo home_url(); ?>#references" class="text-gray-700 hover:text-red-700">Referenzen</a>
-                    <a href="<?php echo home_url(); ?>#career" class="text-gray-700 hover:text-red-700">Jobs</a>
-                    <a href="<?php echo home_url(); ?>#contact" class="text-gray-700 hover:text-red-700">Kontakt</a>
+                    <a href="<?php echo home_url(); ?>#services" class="text-gray-700 hover:text-custom-orange">Leistungen</a>
+                    <a href="<?php echo home_url(); ?>#references" class="text-gray-700 hover:text-custom-orange">Referenzen</a>
+                    <a href="<?php echo home_url(); ?>#career" class="text-gray-700 hover:text-custom-orange">Jobs</a>
+                    <a href="<?php echo home_url(); ?>#contact" class="text-gray-700 hover:text-custom-orange">Kontakt</a>
                 </div>
 
                 <!-- Desktop CTA -->
                 <div class="hidden md:block">
-                    <a href="tel:+4944954444" class="flex items-center text-red-700 font-semibold group">
+                    <a href="tel:+4944954444" class="flex items-center text-custom-orange font-semibold group">
                         Jetzt anrufen!
                         <svg class="w-3 h-3 ml-1 transform group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -73,7 +73,7 @@
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" 
-                        class="md:hidden p-2 rounded-md text-gray-700 hover:text-red-700 focus:outline-none"
+                        class="md:hidden p-2 rounded-md text-gray-700 hover:text-custom-orange focus:outline-none"
                         aria-label="Menu">
                     <div class="burger-icon">
                         <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -100,11 +100,11 @@
             <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50">
                 <div class="container mx-auto px-4 py-4">
                     <div class="flex flex-col space-y-4">
-                        <a href="/" class="text-gray-700 hover:text-red-700">Startseite</a>
-                        <a href="/leistungen" class="text-gray-700 hover:text-red-700">Leistungen</a>
-                        <a href="/referenzen" class="text-gray-700 hover:text-red-700">Referenzen</a>
-                        <a href="/karriere" class="text-gray-700 hover:text-red-700">Jobs</a>
-                        <a href="#contact" class="text-gray-700 hover:text-red-700">Kontakt</a>
+                        <a href="/" class="text-gray-700 hover:text-custom-orange">Startseite</a>
+                        <a href="/leistungen" class="text-gray-700 hover:text-custom-orange">Leistungen</a>
+                        <a href="/referenzen" class="text-gray-700 hover:text-custom-orange">Referenzen</a>
+                        <a href="/karriere" class="text-gray-700 hover:text-custom-orange">Jobs</a>
+                        <a href="#contact" class="text-gray-700 hover:text-custom-orange">Kontakt</a>
                     </div>
                 </div>
             </div>

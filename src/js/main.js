@@ -1,3 +1,4 @@
+// Parallax and Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Parallax functionality
     const parallaxContainer = document.querySelector('.parallax-container');

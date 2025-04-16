@@ -35,7 +35,7 @@ This file is just for WordPress theme information
   }
   
   .service-price {
-    @apply text-green-600 font-semibold text-lg;
+    @apply text-custom-orange font-semibold text-lg;
   }
   
   .service-duration {

@@ -783,8 +783,8 @@ video {
   height: 1.25rem;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
+.h-\[60vh\] {
+  height: 60vh;
 }
 
 .h-full {
@@ -937,24 +937,14 @@ video {
   background-color: rgb(0 0 0 / 0.6);
 }
 
-.bg-emerald-600 {
+.bg-custom-orange {
   --tw-bg-opacity: 1;
-  background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
+  background-color: rgb(231 94 42 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
-}
-
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -1050,19 +1040,19 @@ video {
   font-weight: 600;
 }
 
-.text-gray-400 {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.text-custom-orange {
+  --tw-text-opacity: 1;
+  color: rgb(231 94 42 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
-}
-
-.text-red-700 {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
@@ -1143,29 +1133,19 @@ html {
   scroll-behavior: smooth;
 }
 
-.hover\:bg-emerald-700:hover {
+.hover\:bg-custom-orange:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(4 120 87 / var(--tw-bg-opacity, 1));
+  background-color: rgb(231 94 42 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-red-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
+.hover\:text-custom-orange:hover {
+  --tw-text-opacity: 1;
+  color: rgb(231 94 42 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-red-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
-}
-
-.hover\:text-red-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
@@ -1222,8 +1202,8 @@ html {
     display: none;
   }
 
-  .md\:h-screen {
-    height: 100vh;
+  .md\:h-\[80vh\] {
+    height: 80vh;
   }
 
   .md\:grid-cols-2 {
@@ -1256,6 +1236,11 @@ html {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
