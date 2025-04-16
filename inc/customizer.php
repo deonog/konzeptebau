@@ -74,9 +74,9 @@
         ));
         
         /* Logo */
-        $wp_customize->add_section('Logo', array(
-            'title' => __('Logo', 'konzeptebau'),
-            'description'  => sprintf(__('Upload Logo','konzeptebau')),
+        $wp_customize->add_section('Header', array(
+            'title' => __('Header', 'konzeptebau'),
+            'description'  => sprintf(__('Header','konzeptebau')),
             'priority'  => 130
         ));
 
@@ -87,10 +87,25 @@
 
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo', array(
             'label'  => __('Logo', 'konzeptebau'),
-            'section'  => 'Logo', 
+            'section'  => 'Header', 
             'settings'  => 'logo',
             'priority' => 1
         )));
+
+        $wp_customize->add_setting('header_button_text', array(
+            'default'  => _x('Jetzt kontaktieren!', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('header_button_text', array(
+            'label'  => __('Header Button Text', 'konzeptebau'),
+            'section'  => 'Header', 
+            'priority' => 2
+        ));
+
+        $wp_customize->selective_refresh->add_partial('header_button_text', array(
+            'selector' => '.header-button-text',
+        ) );
 
         /* Hero */
         $wp_customize->add_section('Hero', array(

@@ -64,7 +64,9 @@
                 <!-- Desktop CTA -->
                 <div class="hidden md:block">
                     <a href="<?php echo home_url(); ?>#contact" class="flex items-center text-custom-orange font-semibold group">
-                        Jetzt kontaktieren!
+                        <span class="header-button-text">
+                            <?php echo get_theme_mod('header_button_text', 'Jetzt kontaktieren!'); ?>
+                        </span>
                         <svg class="w-3 h-3 ml-1 transform group-hover:translate-y-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                         </svg>
