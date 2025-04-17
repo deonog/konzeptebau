@@ -2,7 +2,7 @@
 
 <main class="overflow-hidden">
     <!-- Hero Section -->
-    <section class="hero-section relative h-[60vh] md:h-[80vh] overflow-hidden">
+    <section class="hero-section relative h-[60vh] md:h-[70vh] overflow-hidden">
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
             <div class="parallax-container absolute inset-0">
@@ -37,6 +37,14 @@
                 </a>
             </div>
         </div>
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+            <div class="animate-bounce flex flex-col items-center text-white cursor-pointer" onclick="document.getElementById('references').scrollIntoView({behavior: 'smooth'})">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </div>
     </section>
 
     <!-- Banner Section -->
@@ -50,68 +58,8 @@
         </div>
     </section>
 
-    <!-- References Section -->
-    <section class="py-16 md:py-24" id="references">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
-                    <span class="references-title">
-                        <?php echo get_theme_mod('references_title', 'Unsere Referenzen'); ?>
-                    </span>
-                </h2>
-                <div class="text-gray-700">
-                    <span class="references-description">
-                        <?php echo nl2br(get_theme_mod('references_description', 'Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.')); ?>
-                    </span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <?php
-                $references = get_posts(array(
-                    'post_type' => 'references',
-                    'numberposts' => -1
-                ));
-
-                if (empty($references)) : ?>
-                    <div class="col-span-full flex flex-col items-center justify-center py-12">
-                        <p class="text-gray-600 text-lg no-references-text text-center">
-                            <?php echo get_theme_mod('no_references_text', 'Aktuell sind noch keine Referenzen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
-                        </p>
-                    </div>
-                <?php else :
-                    foreach ($references as $reference) : ?>      
-                        <div class="group cursor-pointer">
-                            <div class="aspect-square overflow-hidden mb-4 relative">
-                                <img src="<?php echo get_the_post_thumbnail_url($reference->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
-                                     alt="<?php echo esc_attr($reference->post_title); ?>" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 group-hover-content">
-                                    <h4 class="text-xl font-semibold text-white mb-3">
-                                        <?php echo esc_html($reference->post_title); ?>
-                                    </h4>
-                                    <p class="text-white text-center">
-                                        <?php 
-                                            $excerpt = get_the_excerpt($reference->ID);
-                                            echo strlen($excerpt) > 150 ? substr($excerpt, 0, 150) . '...' : $excerpt;
-                                        ?>
-                                    </p>
-                                    <div class="hidden">
-                                        <?php echo get_the_excerpt($reference->ID); ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="text-lg font-semibold">→ <?php echo esc_html($reference->post_title); ?></h4>
-                        </div>
-                    <?php endforeach;
-                endif; ?>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
-    <section class="py-16 md:py-24 bg-gray-50" id="services">
+    <section class="py-16 md:py-24" id="services">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
                 <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
@@ -128,10 +76,10 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <?php
-                $services = get_posts(array(
+                $services = array_reverse(get_posts(array(
                     'post_type' => 'services',
                     'numberposts' => -1
-                ));
+                )));
 
                 if (empty($services)) : ?>
                     <div class="col-span-full flex flex-col items-center justify-center py-12">
@@ -165,6 +113,66 @@
                             </div>
                             <h3 class="text-xl font-bold mb-4"><?php echo esc_html($service->post_title); ?></h3>
                             <p class="text-gray-600"><?php echo get_the_excerpt($service->ID); ?></p>
+                        </div>
+                    <?php endforeach;
+                endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="py-16 md:py-24 bg-gray-50" id="references">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
+                    <span class="references-title">
+                        <?php echo get_theme_mod('references_title', 'Unsere Referenzen'); ?>
+                    </span>
+                </h2>
+                <div class="text-gray-700">
+                    <span class="references-description">
+                        <?php echo nl2br(get_theme_mod('references_description', 'Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.')); ?>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <?php
+                $references = array_reverse(get_posts(array(
+                    'post_type' => 'references',
+                    'numberposts' => -1
+                )));
+
+                if (empty($references)) : ?>
+                    <div class="col-span-full flex flex-col items-center justify-center py-12">
+                        <p class="text-gray-600 text-lg no-references-text text-center">
+                            <?php echo get_theme_mod('no_references_text', 'Aktuell sind noch keine Referenzen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
+                        </p>
+                    </div>
+                <?php else :
+                    foreach ($references as $reference) : ?>      
+                        <div class="group cursor-pointer">
+                            <div class="aspect-square overflow-hidden mb-4 relative">
+                                <img src="<?php echo get_the_post_thumbnail_url($reference->ID) ?: get_bloginfo('template_url').'/assets/images/placeholder.webp'; ?>" 
+                                     alt="<?php echo esc_attr($reference->post_title); ?>" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 group-hover-content">
+                                    <h4 class="text-xl font-semibold text-white mb-3">
+                                        <?php echo esc_html($reference->post_title); ?>
+                                    </h4>
+                                    <p class="text-white text-center">
+                                        <?php 
+                                            $excerpt = get_the_excerpt($reference->ID);
+                                            echo strlen($excerpt) > 150 ? substr($excerpt, 0, 150) . '...' : $excerpt;
+                                        ?>
+                                    </p>
+                                    <div class="hidden">
+                                        <?php echo get_the_excerpt($reference->ID); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-semibold">→ <?php echo esc_html($reference->post_title); ?></h4>
                         </div>
                     <?php endforeach;
                 endif; ?>
