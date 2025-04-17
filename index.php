@@ -2,7 +2,7 @@
 
 <main class="overflow-hidden">
     <!-- Hero Section -->
-    <section class="hero-section relative h-[60vh] md:h-[70vh] overflow-hidden">
+    <section class="hero-section relative h-[60vh] md:h-[75vh] overflow-hidden">
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
             <div class="parallax-container absolute inset-0">
@@ -39,7 +39,7 @@
         </div>
         <!-- Scroll Down Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-            <div class="animate-bounce flex flex-col items-center text-white cursor-pointer" onclick="document.getElementById('references').scrollIntoView({behavior: 'smooth'})">
+            <div class="animate-bounce flex flex-col items-center text-white cursor-pointer" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
