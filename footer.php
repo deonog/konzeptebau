@@ -43,12 +43,14 @@
         </div>
 
         <!-- Bottom Bar -->
-        <div class="mt-12 pt-8 border-t border-gray-800">
+      <div class="mt-12 pt-8 border-t border-gray-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-black mb-4 md:mb-0">
-                    © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
-                </p>
-                <div class="md:ml-4">
+                <div class="order-2 md:order-1">
+                    <p class="text-sm text-black mb-4 md:mb-0">
+                        © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2 mb-4 md:mb-0 md:ml-4">
                     <?php
                     wp_nav_menu(
                         array(
@@ -69,7 +71,7 @@
                     ?>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </footer>
 
