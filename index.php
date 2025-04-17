@@ -181,10 +181,19 @@
                                      alt="<?php echo esc_attr($reference->post_title); ?>" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
-                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 group-hover-content">
+                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 group-hover-content">
+                                    <h4 class="text-xl font-semibold text-white mb-3">
+                                        <?php echo esc_html($reference->post_title); ?>
+                                    </h4>
                                     <p class="text-white text-center">
-                                        <?php echo get_the_excerpt($reference->ID); ?>
+                                        <?php 
+                                            $excerpt = get_the_excerpt($reference->ID);
+                                            echo strlen($excerpt) > 150 ? substr($excerpt, 0, 150) . '...' : $excerpt;
+                                        ?>
                                     </p>
+                                    <div class="hidden">
+                                        <?php echo get_the_excerpt($reference->ID); ?>
+                                    </div>
                                 </div>
                             </div>
                             <h4 class="text-lg font-semibold">→ <?php echo esc_html($reference->post_title); ?></h4>
