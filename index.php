@@ -54,7 +54,7 @@
     <section class="py-16 md:py-24" id="services">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
                     <span class="services-title">
                         <?php echo get_theme_mod('services_title', 'Unsere Leistungen'); ?>
                     </span>
@@ -124,7 +124,7 @@
                     />
                 </div>
                 <div class="order-1 md:order-2">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
                         <span class="about-title">
                             <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
                         </span>
@@ -148,7 +148,7 @@
     <section class="py-16 md:py-24" id="references">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
                     <span class="references-title">
                         <?php echo get_theme_mod('references_title', 'Unsere Referenzen'); ?>
                     </span>
@@ -200,7 +200,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
                         <span class="careers-title">
                             <?php echo get_theme_mod('careers_title', 'Wir suchen neue Mitarbeiter!'); ?>
                         </span>
@@ -231,7 +231,7 @@
     <section id="contact" class="py-16 md:py-24" id="contact">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
                     <span class="contact-title">
                         <?php echo get_theme_mod('contact_title', 'Unsere Zimmerei und Dachdeckerei ist auch im Notfall für Sie da'); ?>
                     </span>
