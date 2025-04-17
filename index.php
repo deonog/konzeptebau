@@ -50,100 +50,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="py-16 md:py-24" id="services">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
-                    <span class="services-title">
-                        <?php echo get_theme_mod('services_title', 'Unsere Leistungen'); ?>
-                    </span>
-                </h2>
-                <p class="text-gray-700">
-                    <span class="services-description">
-                        <?php echo nl2br(get_theme_mod('services_description', 'Wir bieten Ihnen professionelle Dienstleistungen mit höchster Qualität und Expertise.')); ?>
-                    </span>
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <?php
-                $services = get_posts(array(
-                    'post_type' => 'services',
-                    'numberposts' => -1
-                ));
-
-                if (empty($services)) : ?>
-                    <div class="col-span-full flex flex-col items-center justify-center py-12">
-                        <p class="text-gray-600 text-lg no-services-text text-center">
-                            <?php echo get_theme_mod('no_services_text', 'Aktuell sind noch keine Leistungen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
-                        </p>
-                    </div>
-                <?php else :
-                    foreach ($services as $service) : ?>
-                        <div class="bg-white p-8 rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow duration-300">
-                            <div class="w-16 h-16 mb-6 flex items-center justify-center rounded-full border-2 border-custom-orange/20">
-                                <?php 
-                                    $svg_icon = get_post_meta($service->ID, '_service_svg_icon', true);
-                                    if ($svg_icon) {
-                                        echo wp_kses($svg_icon, array(
-                                            'svg' => array(
-                                                'class' => true,
-                                                'viewbox' => true,
-                                                'fill' => true,
-                                                'stroke' => true,
-                                            ),
-                                            'path' => array(
-                                                'stroke-linecap' => true,
-                                                'stroke-linejoin' => true,
-                                                'stroke-width' => true,
-                                                'd' => true,
-                                            ),
-                                        ));
-                                    }
-                                    // No default SVG if none is set
-                                ?>
-                            </div>
-                            <h3 class="text-xl font-bold mb-4"><?php echo esc_html($service->post_title); ?></h3>
-                            <p class="text-gray-600"><?php echo get_the_excerpt($service->ID); ?></p>
-                        </div>
-                    <?php endforeach;
-                endif; ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-16 md:py-24 bg-gray-50" id="about">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="order-1 md:order-1">
-                    <img src="<?php echo get_theme_mod('about_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
-                         alt="about image" 
-                         class="w-full rounded-lg shadow-lg"
-                    />
-                </div>
-                <div class="order-2 md:order-2">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
-                        <span class="about-title">
-                            <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
-                        </span>
-                    </h2>
-                    <h3 class="text-xl mb-4">
-                        <span class="about-subtitle">
-                            <?php echo get_theme_mod('about_subtitle', 'Für hochwertige Lösungen im Holzbau'); ?>
-                        </span>
-                    </h3>           
-                    <div class="text-gray-700 mb-6">
-                        <span class="about-description">
-                            <?php echo nl2br(get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.')); ?>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- References Section -->
     <section class="py-16 md:py-24" id="references">
         <div class="container mx-auto px-4">
@@ -200,6 +106,99 @@
                         </div>
                     <?php endforeach;
                 endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 md:py-24 bg-gray-50" id="services">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
+                    <span class="services-title">
+                        <?php echo get_theme_mod('services_title', 'Unsere Leistungen'); ?>
+                    </span>
+                </h2>
+                <p class="text-gray-700">
+                    <span class="services-description">
+                        <?php echo nl2br(get_theme_mod('services_description', 'Wir bieten Ihnen professionelle Dienstleistungen mit höchster Qualität und Expertise.')); ?>
+                    </span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <?php
+                $services = get_posts(array(
+                    'post_type' => 'services',
+                    'numberposts' => -1
+                ));
+
+                if (empty($services)) : ?>
+                    <div class="col-span-full flex flex-col items-center justify-center py-12">
+                        <p class="text-gray-600 text-lg no-services-text text-center">
+                            <?php echo get_theme_mod('no_services_text', 'Aktuell sind noch keine Leistungen verfügbar. Bitte schauen Sie später wieder vorbei.'); ?>
+                        </p>
+                    </div>
+                <?php else :
+                    foreach ($services as $service) : ?>
+                        <div class="bg-white p-8 rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1),0_10px_20px_-2px_rgba(0,0,0,0.04)] transition-shadow duration-300">
+                            <div class="w-16 h-16 mb-6 flex items-center justify-center rounded-full border-2 border-custom-orange/20">
+                                <?php 
+                                    $svg_icon = get_post_meta($service->ID, '_service_svg_icon', true);
+                                    if ($svg_icon) {
+                                        echo wp_kses($svg_icon, array(
+                                            'svg' => array(
+                                                'class' => true,
+                                                'viewbox' => true,
+                                                'fill' => true,
+                                                'stroke' => true,
+                                            ),
+                                            'path' => array(
+                                                'stroke-linecap' => true,
+                                                'stroke-linejoin' => true,
+                                                'stroke-width' => true,
+                                                'd' => true,
+                                            ),
+                                        ));
+                                    }
+                                ?>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4"><?php echo esc_html($service->post_title); ?></h3>
+                            <p class="text-gray-600"><?php echo get_the_excerpt($service->ID); ?></p>
+                        </div>
+                    <?php endforeach;
+                endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 md:py-24 bg-gray-50" id="about">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="order-1 md:order-1">
+                    <img src="<?php echo get_theme_mod('about_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
+                         alt="about image" 
+                         class="w-full rounded-lg shadow-lg"
+                    />
+                </div>
+                <div class="order-2 md:order-2">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
+                        <span class="about-title">
+                            <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
+                        </span>
+                    </h2>
+                    <h3 class="text-xl mb-4">
+                        <span class="about-subtitle">
+                            <?php echo get_theme_mod('about_subtitle', 'Für hochwertige Lösungen im Holzbau'); ?>
+                        </span>
+                    </h3>           
+                    <div class="text-gray-700 mb-6">
+                        <span class="about-description">
+                            <?php echo nl2br(get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.')); ?>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
