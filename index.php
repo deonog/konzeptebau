@@ -14,14 +14,19 @@
         </div>
         <div class="relative container mx-auto px-4 h-full flex items-center z-20">
             <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                <p class="text-sm md:text-base uppercase tracking-wider mb-2 text-white font-semibold">
+                    <span class="hero-topline">
+                        <?php echo get_theme_mod('hero_topline', 'Ihr Experte für Holzbau'); ?>
+                    </span>
+                </p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-custom-orange">
                     <span class="hero-title">
                         <?php echo get_theme_mod('hero_title', 'Holzbau auf aller höchsten Niveau!'); ?>
                     </span>
                 </h1>
                 <p class="text-lg md:text-xl mb-6">
                     <span class="hero-description">
-                        <?php echo get_theme_mod('hero_description', 'Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.'); ?>
+                        <?php echo nl2br(get_theme_mod('hero_description', 'Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.')); ?>
                     </span>
                 </p>
                 <a href="<?php echo home_url(); ?>#contact" 
@@ -31,6 +36,17 @@
                     </span>
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section" style="background-color: #E75E2A; padding-top: 1.5rem; padding-bottom: 1.5rem;">
+        <div class="container mx-auto px-4">
+            <p class="text-white text-lg md:text-2xl font-medium" style="margin-bottom: 0;">
+                <span class="banner-description">
+                    <?php echo nl2br(get_theme_mod('banner_description', 'Ihre Bauleitung - im Münsterland, Ruhrgebiet und NRW')); ?>
+                </span>
+            </p>
         </div>
     </section>
 
@@ -45,7 +61,7 @@
                 </h2>
                 <p class="text-gray-700">
                     <span class="services-description">
-                        <?php echo get_theme_mod('services_description', 'Wir bieten Ihnen professionelle Dienstleistungen mit höchster Qualität und Expertise.'); ?>
+                        <?php echo nl2br(get_theme_mod('services_description', 'Wir bieten Ihnen professionelle Dienstleistungen mit höchster Qualität und Expertise.')); ?>
                     </span>
                 </p>
             </div>
@@ -84,12 +100,8 @@
                                                 'd' => true,
                                             ),
                                         ));
-                                    } else {
-                                        // Default SVG if none is set
-                                        echo '<svg class="w-8 h-8 text-custom-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 7l-5 5 5 5"/>
-                                            </svg>';
                                     }
+                                    // No default SVG if none is set
                                 ?>
                             </div>
                             <h3 class="text-xl font-bold mb-4"><?php echo esc_html($service->post_title); ?></h3>
@@ -122,11 +134,11 @@
                             <?php echo get_theme_mod('about_subtitle', 'Für hochwertige Lösungen im Holzbau'); ?>
                         </span>
                     </h3>           
-                    <p class="text-gray-700 mb-6">
+                    <div class="text-gray-700 mb-6">
                         <span class="about-description">
-                            <?php echo get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.'); ?>
+                            <?php echo nl2br(get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.')); ?>
                         </span>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,11 +153,11 @@
                         <?php echo get_theme_mod('references_title', 'Unsere Referenzen'); ?>
                     </span>
                 </h2>
-                <p class="text-gray-700">
+                <div class="text-gray-700">
                     <span class="references-description">
-                        <?php echo get_theme_mod('references_description', 'Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.'); ?>
+                        <?php echo nl2br(get_theme_mod('references_description', 'Entdecken Sie unsere erfolgreich abgeschlossenen Projekte und lassen Sie sich von unserer Arbeit überzeugen.')); ?>
                     </span>
-                </p>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -195,7 +207,7 @@
                     </h2>   
                     <p class="text-gray-700 mb-6">
                         <span class="careers-description">
-                            <?php echo get_theme_mod('careers_description', 'Als Meister- und Ausbildungsbetrieb ist das A-Team Holzbau ständig auf der Suche nach motivierten Mitarbeitern.'); ?>
+                            <?php echo nl2br(get_theme_mod('careers_description', 'Als Meister- und Ausbildungsbetrieb ist das A-Team Holzbau ständig auf der Suche nach motivierten Mitarbeitern.')); ?>
                         </span>
                     </p>
                     <a href="/karriere" 
@@ -226,7 +238,7 @@
                 </h2>
                 <p class="text-gray-700 mb-6">
                     <span class="contact-description">
-                        <?php echo get_theme_mod('contact_description', 'Sie haben ein dringendes Anliegen? Kontaktieren Sie uns noch heute!'); ?>
+                        <?php echo nl2br(get_theme_mod('contact_description', 'Sie haben ein dringendes Anliegen? Kontaktieren Sie uns noch heute!')); ?>
                     </span>
                 </p>
                 <div class="space-y-4 flex flex-col items-center">

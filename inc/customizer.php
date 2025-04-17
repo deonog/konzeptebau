@@ -126,6 +126,21 @@
             'priority' => 1
         )));
 
+        $wp_customize->add_setting('hero_topline', array(
+            'default'  => _x('Ihr Experte für Holzbau', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('hero_topline', array(   
+            'label'  => __('Hero Topline', 'konzeptebau'),
+            'section'  => 'Hero', 
+            'priority' => 2
+        ));
+        
+        $wp_customize->selective_refresh->add_partial('hero_topline', array(
+            'selector' => '.hero-topline',
+        ) );
+        
         $wp_customize->add_setting('hero_title', array(
             'default'  => _x('Holzbau auf aller höchsten Niveau!', 'konzeptebau'),
             'type'  => 'theme_mod'
@@ -149,7 +164,8 @@
         $wp_customize->add_control('hero_description', array(
             'label'  => __('Hero Description', 'konzeptebau'),
             'section'  => 'Hero', 
-            'priority' => 3
+            'priority' => 3,
+            'type' => 'textarea'
         ));
 
         $wp_customize->selective_refresh->add_partial('hero_description', array(
@@ -171,6 +187,29 @@
             'selector' => '.hero-button-text',
         ) );
 
+        /* Banner */
+        $wp_customize->add_section('Banner', array(
+            'title' => __('Banner', 'konzeptebau'),
+            'description'  => sprintf(__('Banner','konzeptebau')),
+            'priority'  => 130
+        ));
+
+        $wp_customize->add_setting('banner_description', array(
+            'default'  => _x('Wir sind Ihr zuverlässiger Partner für Dachdecken- und Zimmererarbeiten in Lastrup. Mit jahrelanger Erfahrung und Expertise stehen wir für Qualität, Pünktlichkeit und angemessene Preise.', 'konzeptebau'),
+            'type'  => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('banner_description', array(
+            'label'  => __('Banner Description', 'konzeptebau'),
+            'section'  => 'Banner', 
+            'priority' => 1,    
+            'type' => 'textarea'
+        ));
+        
+        $wp_customize->selective_refresh->add_partial('banner_description', array(
+            'selector' => '.banner-description',
+        ) );
+        
         /* Services */
 
         $wp_customize->add_section('Services', array(
@@ -217,7 +256,8 @@
         $wp_customize->add_control('services_description', array(   
             'label'  => __('Services Description', 'konzeptebau'),
             'section'  => 'Services', 
-            'priority' => 3
+            'priority' => 3,
+            'type'     => 'textarea'
         ));
         
         $wp_customize->selective_refresh->add_partial('services_description', array(
@@ -298,7 +338,8 @@
         $wp_customize->add_control('about_description', array(
             'label'  => __('About Description', 'konzeptebau'),
             'section'  => 'About', 
-            'priority' => 4
+            'priority' => 4,
+            'type' => 'textarea'
         ));
         
         $wp_customize->selective_refresh->add_partial('about_description', array(
@@ -351,7 +392,8 @@
         $wp_customize->add_control('no_references_text', array(
             'label'  => __('No References Text', 'konzeptebau'),
             'section'  => 'References', 
-            'priority' => 3
+            'priority' => 3,
+            'type' => 'textarea'
         ));
 
         $wp_customize->selective_refresh->add_partial('no_references_text', array(
@@ -400,7 +442,8 @@
         $wp_customize->add_control('careers_description', array(
             'label'  => __('Careers Description', 'konzeptebau'),
             'section'  => 'Careers', 
-            'priority' => 3
+            'priority' => 3,
+            'type' => 'textarea'
         ));
 
         $wp_customize->selective_refresh->add_partial('careers_description', array(
@@ -452,7 +495,8 @@
         $wp_customize->add_control('contact_description', array(
             'label'  => __('Contact Description', 'konzeptebau'),
             'section'  => 'Contact', 
-            'priority' => 2
+            'priority' => 2,
+            'type' => 'textarea'
         ));
 
         $wp_customize->selective_refresh->add_partial('contact_description', array(

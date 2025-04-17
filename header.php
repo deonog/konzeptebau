@@ -31,6 +31,12 @@
                         </svg>
                         <?php echo get_theme_mod('email', 'info@konzeptebau.de'); ?>
                     </a>
+                    <a href="tel:<?php echo get_theme_mod('phone', '+49 123 456 789'); ?>" class="flex items-center hover:text-gray-200">
+                        <svg class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <?php echo get_theme_mod('phone', '+49 123 456 789'); ?>
+                    </a>
                 </div>
                 <button id="close-announcement" class="p-1 hover:text-gray-200 focus:outline-none" aria-label="Close announcement">
                     <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -56,9 +62,9 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center justify-center flex-1 space-x-8">
                     <a href="<?php echo home_url(); ?>#services" class="text-gray-700 hover:text-custom-orange">Leistungen</a>
+                    <a href="<?php echo home_url(); ?>#about" class="text-gray-700 hover:text-custom-orange">Über uns</a>
                     <a href="<?php echo home_url(); ?>#references" class="text-gray-700 hover:text-custom-orange">Referenzen</a>
                     <a href="<?php echo home_url(); ?>#career" class="text-gray-700 hover:text-custom-orange">Jobs</a>
-                    <a href="<?php echo home_url(); ?>#contact" class="text-gray-700 hover:text-custom-orange">Kontakt</a>
                 </div>
 
                 <!-- Desktop CTA -->
@@ -103,6 +109,7 @@
                 <div class="container mx-auto px-4 py-4">
                     <div class="flex flex-col space-y-4">
                         <a href="<?php echo home_url(); ?>#services" class="text-gray-700 hover:text-custom-orange">Leistungen</a>
+                        <a href="<?php echo home_url(); ?>#about" class="text-gray-700 hover:text-custom-orange">Über uns</a>
                         <a href="<?php echo home_url(); ?>#references" class="text-gray-700 hover:text-custom-orange">Referenzen</a>
                         <a href="<?php echo home_url(); ?>#career" class="text-gray-700 hover:text-custom-orange">Jobs</a>
                         <a href="<?php echo home_url(); ?>#contact" class="text-gray-700 hover:text-custom-orange">Kontakt</a>
