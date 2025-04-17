@@ -117,13 +117,13 @@
     <section class="py-16 md:py-24 bg-gray-50" id="about">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
+                <div class="order-1 md:order-1">
                     <img src="<?php echo get_theme_mod('about_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
                          alt="about image" 
                          class="w-full rounded-lg shadow-lg"
                     />
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="order-2 md:order-2">
                     <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
                         <span class="about-title">
                             <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
