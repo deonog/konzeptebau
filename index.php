@@ -2,7 +2,7 @@
 
 <main class="overflow-hidden">
     <!-- Hero Section -->
-    <section class="hero-section relative h-[60vh] md:h-[75vh] overflow-hidden">
+    <section class="hero-section relative h-[65vh] md:h-[75vh] overflow-hidden">
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-black/60 z-10"></div>
             <div class="parallax-container absolute inset-0">

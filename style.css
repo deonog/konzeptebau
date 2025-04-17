@@ -1213,6 +1213,10 @@ p {
   height: 1.5rem;
 }
 
+.h-\[65vh\] {
+  height: 65vh;
+}
+
 .w-12 {
   width: 3rem;
 }
