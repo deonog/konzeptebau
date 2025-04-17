@@ -54,9 +54,9 @@
                         array(
                             'theme_location' => 'footer-menu',
                             'container'      => false,
-                            'menu_class'     => 'flex items-center space-x-6 text-sm text-black',
+                            'menu_class'     => 'flex flex-col md:flex-row items-center md:space-x-6 space-y-3 md:space-y-0 text-sm text-black',
                             'fallback_cb'    => function() {
-                                echo '<ul class="flex items-center space-x-6 text-sm text-black">
+                                echo '<ul class="flex flex-col md:flex-row items-center md:space-x-6 space-y-3 md:space-y-0 text-sm text-black">
                                     <li><a href="/impressum" class="hover:text-custom-orange">Impressum</a></li>
                                     <li><a href="/datenschutz" class="hover:text-custom-orange">Datenschutz</a></li>
                                     <li><a href="/agb" class="hover:text-custom-orange">AGB</a></li>
