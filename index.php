@@ -4,7 +4,7 @@
     <!-- Hero Section -->
     <section class="hero-section relative h-[60vh] md:h-[80vh] overflow-hidden">
         <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
             <div class="parallax-container absolute inset-0">
                 <img src="<?php echo get_theme_mod('hero_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
                      alt="hero image" 
