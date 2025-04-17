@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?> 
 
-    <title><?php bloginfo('name'); ?> 
-            <?php is_front_page() ? "| " . bloginfo('description') : "| " . wp_title(); ?>
-    </title>
+    <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') :  wp_title(); ?></title>
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
