@@ -1,4 +1,4 @@
-<footer class="bg-gray-50 text-black py-16">
+<footer class="bg-gray-50 text-black py-12">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo and Contact -->
@@ -46,11 +46,11 @@
       <div class="mt-12 pt-8 border-t border-gray-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="order-2 md:order-1">
-                    <p class="text-sm text-black mb-4 md:mb-0">
+                    <p class="text-sm text-black mb-0">
                         © <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
                     </p>
                 </div>
-                <div class="order-1 md:order-2 mb-4 md:mb-0 md:ml-4">
+                <div class="order-1 md:order-2 mb-8 md:mb-0 md:ml-4">
                     <?php
                     wp_nav_menu(
                         array(

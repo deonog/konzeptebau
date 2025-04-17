@@ -1157,6 +1157,14 @@ p {
   margin-top: 0.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1493,6 +1501,11 @@ p {
   padding-bottom: 1rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1761,6 +1774,11 @@ p {
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:text-2xl {
