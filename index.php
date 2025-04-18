@@ -120,8 +120,39 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="py-16 md:py-24 bg-gray-50" id="about">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="order-1 md:order-1">
+                    <img src="<?php echo get_theme_mod('about_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
+                         alt="about image" 
+                         class="w-full rounded-lg shadow-lg"
+                    />
+                </div>
+                <div class="order-2 md:order-2">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
+                        <span class="about-title">
+                            <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
+                        </span>
+                    </h2>
+                    <h3 class="text-xl mb-4">
+                        <span class="about-subtitle">
+                            <?php echo get_theme_mod('about_subtitle', 'Für hochwertige Lösungen im Holzbau'); ?>
+                        </span>
+                    </h3>           
+                    <div class="text-gray-700 mb-6">
+                        <span class="about-description">
+                            <?php echo nl2br(get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.')); ?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- References Section -->
-    <section class="py-16 md:py-24 bg-gray-50" id="references">
+    <section class="py-16 md:py-24" id="references">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mb-16">
                 <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
@@ -176,37 +207,6 @@
                         </div>
                     <?php endforeach;
                 endif; ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="py-16 md:py-24 bg-gray-50" id="about">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="order-1 md:order-1">
-                    <img src="<?php echo get_theme_mod('about_img', get_bloginfo('template_url').'/assets/images/placeholder.webp'); ?>" 
-                         alt="about image" 
-                         class="w-full rounded-lg shadow-lg"
-                    />
-                </div>
-                <div class="order-2 md:order-2">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-custom-orange">
-                        <span class="about-title">
-                            <?php echo get_theme_mod('about_title', 'Ihr Dachdecker und Zimmerer'); ?>
-                        </span>
-                    </h2>
-                    <h3 class="text-xl mb-4">
-                        <span class="about-subtitle">
-                            <?php echo get_theme_mod('about_subtitle', 'Für hochwertige Lösungen im Holzbau'); ?>
-                        </span>
-                    </h3>           
-                    <div class="text-gray-700 mb-6">
-                        <span class="about-description">
-                            <?php echo nl2br(get_theme_mod('about_description', 'Mit mehr als 20 Jahren Erfahrung haben wir uns einen Namen als verlässlicher Partner gemacht. Unsere Expertise reicht von klassischen Zimmererarbeiten bis hin zu modernen energieeffizienten Dachsystemen. Qualität ist bei uns oberstes Gebot. Wir verwenden nur die besten Materialien und arbeiten mit höchster Sorgfalt.')); ?>
-                        </span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
